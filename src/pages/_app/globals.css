@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Airbnb Cereal";
+  font-weight: 300; /* Light */
+  src: url("/fonts/airbnb-cereal/light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Airbnb Cereal";
+  font-weight: 400; /* Book */
+  src: url("/fonts/airbnb-cereal/book.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Airbnb Cereal";
+  font-weight: 500; /* Medium */
+  src: url("/fonts/airbnb-cereal/medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Airbnb Cereal";
+  font-weight: 700; /* Bold */
+  src: url("/fonts/airbnb-cereal/bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Airbnb Cereal";
+  font-weight: 800; /* Extra Bold */
+  src: url("/fonts/airbnb-cereal/extrabold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Airbnb Cereal";
+  font-weight: 900; /* Black */
+  src: url("/fonts/airbnb-cereal/black.woff2") format("woff2");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+blockquote {
+  @apply prose sm:prose-sm lg:prose-lg xl:prose-xl prose-stone;
+}
+
+p {
+  @apply my-8;
+}
+
+h1 {
+  @apply text-4xl font-hero border-b-4 mt-8;
+}
+
+h2 {
+  @apply text-3xl border-b-4 font-hero mt-16 border-gray-900;
+}
+
+h3 {
+  @apply text-lg border-b mt-8 border-gray-500;
+}
+
+a {
+  @apply text-blue-500 hover:text-pink-500 transition duration-300;
+}
