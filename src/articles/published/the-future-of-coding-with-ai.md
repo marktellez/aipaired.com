@@ -1,9 +1,9 @@
 ---
 title: The Future of Coding with AI
 publishedOn: April 6th 2023
-author: Mark Tellez
+author: Marcus Tellez
 readTime: 6 minutes
-summary: Artificial Intelligence (AI) has changed the way we tackle coding, bringing new tools that automate mundane tasks, boost accuracy, and hasten development. In this piece, we delve into the advantages of AI in coding and how it can better the development process.
+summary: Artificial intelligence (AI) is transforming the coding world, and developers who leverage its capabilities will gain an advantage in the job market. Utilizing AI methods, programmers can enjoy quicker development, greater accuracy, and heightened creativity.
 ---
 
 Artificial intelligence (AI) is transforming the coding world, and developers who leverage its capabilities will gain an advantage in the job market. Utilizing AI methods, programmers can enjoy quicker development, greater accuracy, and heightened creativity .

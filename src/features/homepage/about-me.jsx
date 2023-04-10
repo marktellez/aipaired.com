@@ -12,8 +12,8 @@ export function HomepageAboutMe({}) {
   ];
   return (
     <div className="border-t">
-      <div className="flex items-center gap-10">
-        <div className="w-1/2 justify-center items-center gap-10">
+      <div className="flex-col sm:flex-row  items-center gap-10">
+        <div className="sm:w-1/2 mx-16 sm:mx-auto justify-center items-center gap-10">
           <div className="flex justify-center">
             <img
               src="https://avatars.githubusercontent.com/u/22487431?v=4"
@@ -22,7 +22,7 @@ export function HomepageAboutMe({}) {
           </div>
         </div>
 
-        <div className="w-1/2">
+        <div className="sm:w-1/2">
           <h2>
             Marcus Tellez{" "}
             <span className="text-sm">Sr. Developer and AI Researcher</span>

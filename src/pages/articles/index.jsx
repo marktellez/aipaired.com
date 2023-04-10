@@ -54,8 +54,6 @@ export async function getStaticProps(context) {
     })
   );
 
-  console.dir({ articles });
-
   return {
     props: {
       articles,

@@ -11,8 +11,14 @@ import { ClockIcon, CalendarIcon } from "@heroicons/react/24/solid";
 const ReactMarkdown = dynamic(() => import("react-markdown"), { ssr: false });
 
 export default function Article({ slug, frontmatter, markdownBody }) {
+  const url = process.env.NEXT_PUBLIC_HOST + "/articles/" + slug;
   return (
-    <Layout siteTitle={frontmatter.title}>
+    <Layout
+      article
+      title={frontmatter.title}
+      metaDescription={frontmatter.summary}
+      publishedOn={frontmatter.publishedOn}
+      canonicalUrl={url}>
       <article>
         <div className="relative">
           <figure>
@@ -60,7 +66,6 @@ export default function Article({ slug, frontmatter, markdownBody }) {
 export async function getStaticProps(context) {
   // extracting the slug from the context
   const { slug } = context.params;
-  console.dir(slug);
 
   // retrieving the Markdown file associated to the slug
   // and reading its data

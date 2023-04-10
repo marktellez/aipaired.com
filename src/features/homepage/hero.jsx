@@ -3,7 +3,7 @@ import Image from "next/image";
 export function HomepageHero({}) {
   return (
     <div className="">
-      <div className="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
+      <div className=" pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h1 className="mt-24 text-4xl font-bold tracking-tight text-gray-900 sm:mt-10 sm:text-6xl">
             Leverage AI in your business today

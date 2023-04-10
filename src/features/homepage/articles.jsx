@@ -3,7 +3,7 @@ export function HomepageArticles({ articles = [] }) {
   return (
     <div>
       <h2>Articles about the pairing of AI and developers and businesses</h2>
-      <div className="mt-24 grid-cols-2 mx-auto max-w-3xl">
+      <div className="sm:mt-24 grid-cols-2 mx-auto max-w-3xl">
         {articles.map((article) => (
           <summary key={article.id} className="list-none">
             <h3 className="font-hero text-2xl border-b-0 my-2">

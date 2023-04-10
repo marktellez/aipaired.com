@@ -48,99 +48,100 @@ export const Layout = ({
         <meta property="og:description" content={metaDescription} />
         <meta property="og:url" content="https://aipaired.com/" />
         <meta property="og:site_name" content={siteName} />
-        {article ? (
-          <>
+
+        <>
+          {article ? (
             <meta property="article:modified_time" content={publishedOn} />
-            {siteImage && <meta property="og:image" content={siteImage} />}
-            <meta name="twitter:card" content="summary_large_image" />
-            <script type="application/ld+json" class="yoast-schema-graph">
-              {{
-                "@context": "https://schema.org",
-                "@graph": [
-                  {
-                    "@type": "WebPage",
-                    "@id": "https://aipaired.com/",
-                    url: "https://aipaired.com/",
-                    name: title,
-                    isPartOf: { "@id": "https://aipaired.com/#website" },
-                    about: { "@id": "https://aipaired.com/#organization" },
-                    primaryImageOfPage: {
-                      "@id": "https://aipaired.com/#primaryimage",
-                    },
-                    image: { "@id": "https://aipaired.com/#primaryimage" },
-                    thumbnailUrl: siteImage,
-                    datePublished: publishedOn,
-                    dateModified: modifiedOn,
-                    description: metaDescription,
-                    breadcrumb: { "@id": "https://aipaired.com/#breadcrumb" },
-                    inLanguage: "en-US",
-                    potentialAction: [
-                      {
-                        "@type": "ReadAction",
-                        target: ["https://aipaired.com/"],
-                      },
-                    ],
+          ) : (
+            ""
+          )}
+          {siteImage && <meta property="og:image" content={siteImage} />}
+          <meta name="twitter:card" content="summary_large_image" />
+          <script type="application/ld+json" class="yoast-schema-graph">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "WebPage",
+                  "@id": "https://aipaired.com/",
+                  url: "https://aipaired.com/",
+                  name: title,
+                  isPartOf: { "@id": "https://aipaired.com/#website" },
+                  about: { "@id": "https://aipaired.com/#organization" },
+                  primaryImageOfPage: {
+                    "@id": "https://aipaired.com/#primaryimage",
                   },
-                  {
+                  image: { "@id": "https://aipaired.com/#primaryimage" },
+                  thumbnailUrl: siteImage,
+                  datePublished: publishedOn,
+                  dateModified: modifiedOn,
+                  description: metaDescription,
+                  breadcrumb: { "@id": "https://aipaired.com/#breadcrumb" },
+                  inLanguage: "en-US",
+                  potentialAction: [
+                    {
+                      "@type": "ReadAction",
+                      target: ["https://aipaired.com/"],
+                    },
+                  ],
+                },
+                {
+                  "@type": "ImageObject",
+                  inLanguage: "en-US",
+                  "@id": "https://aipaired.com/#primaryimage",
+                  url: siteImage,
+                  contentUrl: canonicalUrl,
+                },
+                {
+                  "@type": "BreadcrumbList",
+                  "@id": "https://aipaired.com/#breadcrumb",
+                  itemListElement: [
+                    { "@type": "ListItem", position: 1, name: "Home" },
+                  ],
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://aipaired.com/#website",
+                  url: "https://aipaired.com/",
+                  name: siteName,
+                  description: metaDescription,
+                  publisher: { "@id": "https://aipaired.com/#organization" },
+                  potentialAction: [
+                    {
+                      "@type": "SearchAction",
+                      target: {
+                        "@type": "EntryPoint",
+                        urlTemplate:
+                          "https://aipaired.com/?s={search_term_string}",
+                      },
+                      "query-input": "required name=search_term_string",
+                    },
+                  ],
+                  inLanguage: "en-US",
+                },
+                {
+                  "@type": "Organization",
+                  "@id": "https://aipaired.com/#organization",
+                  name: siteName,
+                  url: "https://aipaired.com/",
+                  logo: {
                     "@type": "ImageObject",
                     inLanguage: "en-US",
-                    "@id": "https://aipaired.com/#primaryimage",
+                    "@id": "https://aipaired.com/#/schema/logo/image/",
                     url: siteImage,
-                    contentUrl: canonicalUrl,
+                    contentUrl: siteImage,
+                    width: 512,
+                    height: 512,
+                    caption: siteName,
                   },
-                  {
-                    "@type": "BreadcrumbList",
-                    "@id": "https://aipaired.com/#breadcrumb",
-                    itemListElement: [
-                      { "@type": "ListItem", position: 1, name: "Home" },
-                    ],
+                  image: {
+                    "@id": "https://aipaired.com/#/schema/logo/image/",
                   },
-                  {
-                    "@type": "WebSite",
-                    "@id": "https://aipaired.com/#website",
-                    url: "https://aipaired.com/",
-                    name: siteName,
-                    description: metaDescription,
-                    publisher: { "@id": "https://aipaired.com/#organization" },
-                    potentialAction: [
-                      {
-                        "@type": "SearchAction",
-                        target: {
-                          "@type": "EntryPoint",
-                          urlTemplate:
-                            "https://aipaired.com/?s={search_term_string}",
-                        },
-                        "query-input": "required name=search_term_string",
-                      },
-                    ],
-                    inLanguage: "en-US",
-                  },
-                  {
-                    "@type": "Organization",
-                    "@id": "https://aipaired.com/#organization",
-                    name: siteName,
-                    url: "https://aipaired.com/",
-                    logo: {
-                      "@type": "ImageObject",
-                      inLanguage: "en-US",
-                      "@id": "https://aipaired.com/#/schema/logo/image/",
-                      url: siteImage,
-                      contentUrl: siteImage,
-                      width: 512,
-                      height: 512,
-                      caption: siteName,
-                    },
-                    image: {
-                      "@id": "https://aipaired.com/#/schema/logo/image/",
-                    },
-                  },
-                ],
-              }}
-            </script>
-          </>
-        ) : (
-          ""
-        )}
+                },
+              ],
+            })}
+          </script>
+        </>
       </Head>
       <MainMenu />
       <main>{children}</main>
