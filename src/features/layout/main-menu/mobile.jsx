@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, XIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export const MobileMenu = ({ menuItems = [] }) => {
   return (
@@ -27,7 +27,7 @@ export const MobileMenu = ({ menuItems = [] }) => {
                 <Menu.Button
                   className="focus:outline-none"
                   aria-label="Close menu">
-                  <XIcon className="w-6 h-6" aria-hidden="true" />
+                  <XMarkIcon className="w-6 h-6" aria-hidden="true" />
                 </Menu.Button>
               </div>
               <div className="px-1 py-2">

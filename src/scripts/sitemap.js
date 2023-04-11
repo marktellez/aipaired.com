@@ -1,11 +1,7 @@
-import fs from "fs/promises";
-import path from "path";
+const fs = require("fs/promises");
+const path = require("path");
 
-export default function SitemapPage({}) {
-  return <div />;
-}
-
-export const getServerSideProps = async ({ res }) => {
+(async () => {
   const staticPaths = (await fs.readdir("./src/pages"))
     .filter((staticPage) => {
       return !["index", "api", "_app", "_document", "404", "sitemap"].includes(
@@ -31,27 +27,32 @@ export const getServerSideProps = async ({ res }) => {
   );
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${[...staticPaths, ...articlePaths]
-      .map((url) => {
-        return `
-          <url>
-            <loc>${url}</loc>
-            <lastmod>${new Date().toISOString()}</lastmod>
-            <changefreq>monthly</changefreq>
-            <priority>1.0</priority>
-          </url>
-        `;
-      })
-      .join("")}
-  </urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ${[...staticPaths, ...articlePaths]
+    .map((url) => {
+      return `
+        <url>
+          <loc>${url}</loc>
+          <lastmod>${new Date().toISOString()}</lastmod>
+          <changefreq>monthly</changefreq>
+          <priority>1.0</priority>
+        </url>
+      `;
+    })
+    .join("")}
+</urlset>
 `;
 
-  res.setHeader("Content-Type", "text/xml");
-  res.write(sitemap);
-  res.end();
-
-  return {
-    props: {},
-  };
-};
+  fs.writeFile(
+    path.join(process.cwd(), "public/sitemap.xml"),
+    sitemap,
+    (err) => {
+      if (err) throw err;
+      console.log(
+        `sitemap.xml with ${
+          [...staticPaths, ...articlePaths].length
+        } entries was written successfully`
+      );
+    }
+  );
+})();
