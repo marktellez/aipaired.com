@@ -24,29 +24,27 @@ export default function Article({ slug, frontmatter, markdownBody }) {
           <figure>
             <Image
               className="absolute top-0"
-              width="1920"
-              height="800"
-              src={`/images/articles/${slug}/hero.png`}
+              width={1920}
+              height={800}
+              src={`/images/articles/${slug}/hero.webp`}
               alt={`blog_hero_${frontmatter.title}`}
             />
           </figure>
           <div className="absolute top-1/2 w-full text-center text-white">
             <div className="bg-black backdrop-blur-md bg-opacity-50">
-              <h1 className="text-9xl font-hero drop-shadow-lg text-white">
+              <h1 className="sm:text-9xl font-hero drop-shadow-lg text-white">
                 {frontmatter.title}
               </h1>
             </div>
           </div>
         </div>
         <Container>
-          <div className="flex items-start justify-center my-4">
-            <div className="w-2/3 text-prose max-w-2xl">
+          <div className="sm:flex items-start justify-center my-4">
+            <div className="sm:w-2/3 text-prose max-w-2xl">
               <ReactMarkdown>{markdownBody}</ReactMarkdown>
             </div>
-            <div className="w-1/3 border p-3">
-              <div className="font-semibold text-xl">
-                Author: {frontmatter.author}
-              </div>
+            <div className="sm:w-1/3 border p-8 rounded-lg">
+              <div className="font-semibold text-xl">{frontmatter.author}</div>
               <div className="flex items-center gap-1">
                 <CalendarIcon className=" h-4" />
                 {frontmatter.publishedOn}

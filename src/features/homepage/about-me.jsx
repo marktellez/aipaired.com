@@ -1,23 +1,17 @@
+import Image from "next/image";
+
 export function HomepageAboutMe({}) {
-  const stats = [
-    { name: "25 years experience", value: "" },
-    {
-      name: "Competition winning developer",
-      value: "",
-    },
-    {
-      name: "Early adopter mindset",
-      value: "",
-    },
-  ];
   return (
     <div className="border-t">
-      <div className="flex-col sm:flex-row  items-center gap-10">
+      <div className="flex flex-col sm:flex-row  items-center gap-10">
         <div className="sm:w-1/2 mx-16 sm:mx-auto justify-center items-center gap-10">
           <div className="flex justify-center">
-            <img
-              src="https://avatars.githubusercontent.com/u/22487431?v=4"
+            <Image
+              src="/images/marcus-avatar.png"
               alt="Marcus Tellez"
+              width={300}
+              height={300}
+              className="rounded-full"
             />
           </div>
         </div>

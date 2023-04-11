@@ -14,16 +14,14 @@ import { HomepageCTA as CTA } from "@/features/homepage/cta";
 export default function Homepage({ articles = [] }) {
   return (
     <Layout>
-      <div className="mt-16  ">
-        <Container>
-          <Hero />
-          <AboutMe />{" "}
-        </Container>
-        <CTA />
-        <Container>
-          <Articles {...{ articles }} />
-        </Container>
-      </div>
+      <Container>
+        <Hero />
+        <AboutMe />
+      </Container>
+      <CTA />
+      <Container>
+        <Articles {...{ articles }} />
+      </Container>
     </Layout>
   );
 }
