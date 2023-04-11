@@ -13,7 +13,7 @@ import { HomepageCTA as CTA } from "@/features/homepage/cta";
 
 export default function Homepage({ articles = [] }) {
   return (
-    <Layout>
+    <Layout canonicalUrl="https://aipaired.com">
       <Container>
         <Hero />
         <AboutMe />

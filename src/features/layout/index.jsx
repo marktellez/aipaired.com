@@ -4,8 +4,8 @@ import { Footer } from "./footer";
 
 export const Layout = ({
   children,
-  title,
-  metaDescription,
+  title = "AIPaired: Ethical AI Solutions for Thriving Businesses in the Digital Age",
+  metaDescription = "Discover AI-powered solutions with AIPaired – ethical, responsible, and transformative strategies for businesses navigating the technology-driven future. Thrive in the era of AI and beyond.",
   siteName = "AIPaired - Helping businesses leverage AI",
   siteImage = "https://aipaired.com/images/site-image.png",
   publishedOn,
@@ -57,7 +57,7 @@ export const Layout = ({
           )}
           {siteImage && <meta property="og:image" content={siteImage} />}
           <meta name="twitter:card" content="summary_large_image" />
-          <script type="application/ld+json" class="yoast-schema-graph">
+          <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
               "@graph": [

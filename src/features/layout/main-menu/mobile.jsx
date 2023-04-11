@@ -7,7 +7,9 @@ export const MobileMenu = ({ menuItems = [] }) => {
     <Menu as="div" className="relative sm:hidden">
       {({ open }) => (
         <>
-          <Menu.Button className="flex justify-end w-full p-2 text-sm font-medium text-white rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          <Menu.Button
+            aria-label="Mobile menu"
+            className="flex justify-end w-full p-2 text-sm font-medium text-white rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             <Bars3Icon className="w-6 h-6" aria-hidden="true" />
           </Menu.Button>
           <Transition
@@ -22,7 +24,9 @@ export const MobileMenu = ({ menuItems = [] }) => {
               static
               className="fixed inset-0 bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
               <div className="flex justify-end p-2">
-                <Menu.Button className="focus:outline-none">
+                <Menu.Button
+                  className="focus:outline-none"
+                  aria-label="Close menu">
                   <XIcon className="w-6 h-6" aria-hidden="true" />
                 </Menu.Button>
               </div>

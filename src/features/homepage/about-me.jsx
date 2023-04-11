@@ -8,7 +8,7 @@ export function HomepageAboutMe({}) {
           <div className="flex justify-center">
             <Image
               src="/images/marcus-avatar.png"
-              alt="Marcus Tellez"
+              alt="Marcus Tellez photo"
               width={300}
               height={300}
               className="rounded-full"
@@ -18,8 +18,8 @@ export function HomepageAboutMe({}) {
 
         <div className="sm:w-1/2">
           <h2>
-            Marcus Tellez{" "}
-            <span className="text-sm">Sr. Developer and AI Researcher</span>
+            Meet Marcus Tellez
+            <span className="text-sm"> AI Expert and Thought Leader</span>
           </h2>
           <p className="">
             Marcus Tellez is a highly skilled software developer and AI expert
