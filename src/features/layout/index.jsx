@@ -1,4 +1,5 @@
 import Head from "next/head";
+
 import { MainMenu } from "./main-menu";
 import { Footer } from "./footer";
 
