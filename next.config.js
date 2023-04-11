@@ -13,4 +13,5 @@ module.exports = withTM({
     locales: ["en"],
     defaultLocale: "en",
   },
+  outDir: ".next",
 });
