@@ -5,10 +5,10 @@ import { Footer } from "./footer";
 
 export const Layout = ({
   children,
-  title = "AIPaired: Ethical AI Solutions for Thriving Businesses in the Digital Age",
-  metaDescription = "Discover AI-powered solutions with AIPaired – ethical, responsible, and transformative strategies for businesses navigating the technology-driven future. Thrive in the era of AI and beyond.",
-  siteName = "AIPaired - Helping businesses leverage AI",
-  siteImage = "https://aipaired.com/images/site-image.png",
+  title = process.env.NEXT_PUBLIC_SITE_TITLE,
+  metaDescription = process.env.NEXT_PUBLIC_SITE_DESCRIPTION,
+  siteName = process.env.NEXT_PUBLIC_SITE_NAME,
+  siteImage = process.env.NEXT_PUBLIC_SITE_IMAGE,
   publishedOn,
   modifiedOn,
   canonicalUrl,
