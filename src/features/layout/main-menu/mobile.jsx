@@ -3,6 +3,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export const MobileMenu = ({ menuItems = [] }) => {
+  if (!menuItems.length) return "";
   return (
     <Menu as="div" className="relative sm:hidden">
       {({ open }) => (
