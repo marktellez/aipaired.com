@@ -12,11 +12,15 @@ An exciting development in AI (at least for me) involves generative programming 
 
 ## However, embracing AI in coding has its challenges
 
+![some fear AI could eventually replace human programmers](/images/articles/the-future-of-coding-with-ai/programmer-robot-l.png)
+
 One of the most significant concerns I've heard is job security; some fear AI could eventually replace human programmers. However, AI is not likely to reach human developers' creative and problem-solving abilities anytime soon. And a skilled Developer using AI will always outperform AI by itself or a developer lacking such tools.
 
 Developers must integrate AI tools and techniques into their workflows to stay ahead of the curve. These methods and tools will help future-proof their programming abilities and remain competitive in the job market. By merging human creativity and problem-solving skills with AI's efficiency and accuracy, developers can create more innovative, reliable, and future-proof code.
 
 ## The Benefits of AI in Coding
+
+![automate mundane tasks with AI](/images/articles/the-future-of-coding-with-ai/automate-tasks.png)
 
 Artificial Intelligence (AI) has already altered the way we tackle coding. It has changed the coding landscape by introducing new tools that automate mundane tasks, boost accuracy, and hasten development. Here are some ways you can benefit as a developer:
 
@@ -34,9 +38,13 @@ AI can help developers discover fresh ideas and options. GPT's large language mo
 
 ## The Challenge of Embracing AI
 
+![The Challenge of Embracing AI](/images/articles/the-future-of-coding-with-ai/obstable.png)
+
 Though having doubts, we must acknowledge the positive impact AI may have on the programming field. By embracing AI, programmers can maintain job stability and financial prosperity while keeping up with tech innovations. We'll explore a few top practices for code development using AI and the advantages it provides.
 
 ## AI Tools and Techniques for Future-Proof Programming
+
+![the world goes digital](/images/articles/the-future-of-coding-with-ai/digital-world.png)
 
 As more of the world goes digital, coding has become an essential skill across various sectors. But staying updated with cutting-edge tools and methods for programming can be challenging due to fast technological progress. This is where AI plays a role. Utilizing AI capabilities, programmers can make their coding process more efficient and ensure their skills stay relevant.
 
@@ -49,6 +57,8 @@ But AI also helps with code quality. Developers can also use AI-powered tools to
 AI also aids in enhancing code quality. Programmers can employ AI-driven tools to automate mundane tasks such as documentation, testing, and debugging. Utilizing AI-supported coding saves time and resources for tackling intricate tasks, leading to swifter development and better allocation of resources.
 
 ### Generative Code Using AI
+
+![Generative Code Using AI](/images/articles/the-future-of-coding-with-ai/robots-building-robots.png)
 
 AI code generation is a thrilling tool for programming. For instance, GPT-4 and GPT-5 can produce code from simple language prompts, generating code that fulfills particular requirements with minimal human input. This method might transform how we tackle coding problems, letting developers create code swiftly and effectively.
 
@@ -64,6 +74,8 @@ Sure, some may worry that AI will replace human programmers, the reality is that
 
 # The Future is Now
 
+![The Future is Now](/images/articles/the-future-of-coding-with-ai/future-now.png)
+
 Are you ready for the future in coding? As artificial intelligence (AI) and machine learning grow, developers gain strong new tools. Chatbots help with coding tasks and GPT-5 creates fresh code, showing the various methods AI shifts the programming scene.
 
 Though certain developers might be uneasy about these emerging technologies, many are thrilled by the potential they hold. Embracing AI instruments and methods enables developers to safeguard their abilities, ensuring they stay relevant and maintain a competitive edge in the employment arena for a long time.
@@ -73,6 +85,8 @@ This piece delves into top-notch strategies for programming using AI, such as cr
 If you are an experienced programmer or merely beginning, embracing the future of code through AI is the way forward. Let's begin!
 
 # Conclusion
+
+![programming's future shines](/images/articles/the-future-of-coding-with-ai/kid-coding.png)
 
 Programmers constantly experience change, and they need to adjust and acquire fresh abilities to remain competitive. Among the most thrilling and hopeful advancements in recent times is artificial intelligence (AI). Employing AI instruments and methods allows developers to better their work in a variety of ways, such as boosting effectiveness and fostering creativity and innovation.
 
