@@ -8,7 +8,7 @@ export const DesktopMenu = ({ menuItems = [] }) => {
         {menuItems.map((item, index) => (
           <li key={index}>
             <Link href={item.href}>
-              <span className="lowercase text-white font-medium tracking-wide cursor-pointer hover:text-pink-500 transition duration-300">
+              <span className=" text-white font-medium tracking-wide cursor-pointer hover:text-pink-500 transition duration-300">
                 {item.name}
               </span>
             </Link>
