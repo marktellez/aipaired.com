@@ -1,10 +1,12 @@
 import Image from "next/image";
+import { Breadcrumbs } from "@/ui/breadcrumbs";
 
 export function HomepageHero({}) {
   return (
     <div className="">
       <div className="pb-16 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
         <div className="mx-auto max-w-2xl lg:mx-0">
+          <Breadcrumbs crumbs={[]} />
           <h1 className="mt-4 text-3xl font-hero uppercase font-bold tracking-wide text-gray-900 sm:mt-8 sm:text-5xl">
             Leverage AI in your business today
           </h1>

@@ -7,6 +7,7 @@ import { useInView } from "react-intersection-observer";
 import glob from "glob";
 import { Layout } from "@/features/layout";
 import { Container } from "@/ui/page";
+import { Breadcrumbs } from "@/ui/breadcrumbs";
 
 import { ClockIcon, CalendarIcon } from "@heroicons/react/24/solid";
 
@@ -52,7 +53,19 @@ export default function Article({ slug, frontmatter, markdownBody }) {
               </div>
             </div>
             <Container>
-              <div className="flex  flex-col-reverse sm:flex-row items-start justify-center my-4">
+              <div className="flex items-center justify-center my-3">
+                <Breadcrumbs
+                  crumbs={[
+                    { name: "Articles", href: "/articles", current: false },
+                    {
+                      name: frontmatter.title,
+                      href: window?.location.href,
+                      current: true,
+                    },
+                  ]}
+                />
+              </div>
+              <div className="flex flex-col-reverse sm:flex-row items-start justify-center my-4">
                 <div className="sm:w-2/3 text-prose max-w-2xl">
                   <ReactMarkdown>{markdownBody}</ReactMarkdown>
                 </div>

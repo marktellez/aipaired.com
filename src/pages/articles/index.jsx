@@ -6,12 +6,16 @@ import matter from "gray-matter";
 
 import { Layout } from "@/features/layout";
 import { Container } from "@/ui/page";
+import { Breadcrumbs } from "@/ui/breadcrumbs";
 
 export default function ArticlesIndex({ articles = [] }) {
   return (
     <Layout>
       <Container>
         <div className="mt-24 grid-cols-2 mx-auto max-w-3xl">
+          <Breadcrumbs
+            crumbs={[{ name: "Articles", href: "/articles", current: true }]}
+          />
           {articles.map((article) => (
             <summary key={article.id} className="list-none">
               <h3 className="font-hero text-2xl border-b-0 my-2">
