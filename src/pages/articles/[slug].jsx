@@ -1,6 +1,8 @@
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import matter from "gray-matter";
 import dynamic from "next/dynamic";
+import { useInView } from "react-intersection-observer";
 
 import glob from "glob";
 import { Layout } from "@/features/layout";
@@ -12,6 +14,15 @@ const ReactMarkdown = dynamic(() => import("react-markdown"), { ssr: false });
 
 export default function Article({ slug, frontmatter, markdownBody }) {
   const url = process.env.NEXT_PUBLIC_HOST + "/articles/" + slug;
+  const [shouldRender, setShouldRender] = useState(false);
+  const { ref, inView } = useInView({ threshold: 0 });
+
+  useEffect(() => {
+    if (inView) {
+      setShouldRender(true);
+    }
+  }, [inView]);
+
   return (
     <Layout
       article
@@ -19,43 +30,49 @@ export default function Article({ slug, frontmatter, markdownBody }) {
       metaDescription={frontmatter.summary}
       publishedOn={frontmatter.publishedOn}
       canonicalUrl={url}>
-      <article>
-        <div className="relative">
-          <figure>
-            <Image
-              className="absolute top-0"
-              width={1920}
-              height={800}
-              src={`/images/articles/${slug}/hero.webp`}
-              alt={`blog_hero_${frontmatter.title}`}
-            />
-          </figure>
-          <div className="absolute top-1/2 w-full text-center text-white">
-            <div className="bg-black backdrop-blur-md bg-opacity-50">
-              <h1 className="sm:text-9xl font-hero drop-shadow-lg text-white">
-                {frontmatter.title}
-              </h1>
-            </div>
-          </div>
-        </div>
-        <Container>
-          <div className="sm:flex items-start justify-center my-4">
-            <div className="sm:w-2/3 text-prose max-w-2xl">
-              <ReactMarkdown>{markdownBody}</ReactMarkdown>
-            </div>
-            <div className="sm:w-1/3 border p-8 rounded-lg">
-              <div className="font-semibold text-xl">{frontmatter.author}</div>
-              <div className="flex items-center gap-1">
-                <CalendarIcon className=" h-4" />
-                {frontmatter.publishedOn}
-              </div>
-              <div className="flex items-center gap-1">
-                <ClockIcon className=" h-4" />
-                {frontmatter.readTime} read time
+      <article ref={ref}>
+        {shouldRender && (
+          <>
+            <div className="relative">
+              <figure>
+                <Image
+                  className="absolute top-0 min-h-[800px]"
+                  width={1920}
+                  height={800}
+                  src={`/images/articles/${slug}/hero.webp`}
+                  alt={`blog_hero_${frontmatter.title}`}
+                />
+              </figure>
+              <div className="absolute top-1/2 w-full text-center text-white">
+                <div className="bg-black backdrop-blur-md bg-opacity-50">
+                  <h1 className="sm:text-8xl font-hero drop-shadow-lg text-white">
+                    {frontmatter.title}
+                  </h1>
+                </div>
               </div>
             </div>
-          </div>
-        </Container>
+            <Container>
+              <div className="sm:flex items-start justify-center my-4">
+                <div className="sm:w-2/3 text-prose max-w-2xl">
+                  <ReactMarkdown>{markdownBody}</ReactMarkdown>
+                </div>
+                <div className="sm:w-1/3 border p-8 rounded-lg">
+                  <div className="font-semibold text-xl">
+                    {frontmatter.author}
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <CalendarIcon className=" h-4" />
+                    {frontmatter.publishedOn}
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <ClockIcon className=" h-4" />
+                    {frontmatter.readTime} read time
+                  </div>
+                </div>
+              </div>
+            </Container>
+          </>
+        )}
       </article>
     </Layout>
   );
