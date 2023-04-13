@@ -52,12 +52,12 @@ export default function Article({ slug, frontmatter, markdownBody }) {
               </div>
             </div>
             <Container>
-              <div className="sm:flex items-start justify-center my-4">
+              <div className="flex  flex-col-reverse sm:flex-row items-start justify-center my-4">
                 <div className="sm:w-2/3 text-prose max-w-2xl">
                   <ReactMarkdown>{markdownBody}</ReactMarkdown>
                 </div>
-                <div className="sm:w-1/3 border p-8 rounded-lg">
-                  <div className="font-semibold text-xl">
+                <div className="w-full sm:w-1/3 sm:border p-3 sm:p-8 rounded-lg text-sm">
+                  <div className="font-semibold sm:text-xl">
                     {frontmatter.author}
                   </div>
                   <div className="flex items-center gap-1">

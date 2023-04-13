@@ -4,7 +4,7 @@ import { EnvelopeIcon } from "@heroicons/react/20/solid";
 export const DesktopMenu = ({ menuItems = [] }) => {
   return (
     <div className="flex items-center">
-      <ul className="hidden md:flex items-center justify-center space-x-4 text-sm flex-grow">
+      <ul className="flex items-center justify-center space-x-4 text-sm flex-grow">
         {menuItems.map((item, index) => (
           <li key={index}>
             <Link href={item.href}>

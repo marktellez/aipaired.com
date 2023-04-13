@@ -5,7 +5,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 export const MobileMenu = ({ menuItems = [] }) => {
   if (!menuItems.length) return "";
   return (
-    <Menu as="div" className="relative sm:hidden">
+    <Menu as="div" className="relative sm:hidden ">
       {({ open }) => (
         <>
           <Menu.Button
@@ -21,16 +21,7 @@ export const MobileMenu = ({ menuItems = [] }) => {
             leave="transition ease-in duration-75 transform"
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95">
-            <Menu.Items
-              static
-              className="fixed inset-0 bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-              <div className="flex justify-end p-2">
-                <Menu.Button
-                  className="focus:outline-none"
-                  aria-label="Close menu">
-                  <XMarkIcon className="w-6 h-6" aria-hidden="true" />
-                </Menu.Button>
-              </div>
+            <Menu.Items static className="fixed inset-0 bg-white ">
               <div className="px-1 py-2">
                 {menuItems.map((item, index) => (
                   <Menu.Item key={index}>

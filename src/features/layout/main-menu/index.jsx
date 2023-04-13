@@ -30,7 +30,6 @@ export const MainMenu = () => {
           </Link>
           <div className="w-full">
             <DesktopMenu {...{ menuItems }} />
-            <MobileMenu {...{ menuItems }} />
           </div>
         </div>
       </Container>
