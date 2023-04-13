@@ -10,6 +10,7 @@ export function Breadcrumbs({ crumbs = [] }) {
               {
                 "@context": "https://schema.org",
                 "@type": "BreadcrumbList",
+                id: process.env.NEXT_PUBLIC_HOST + "/#breadcrumbs",
                 itemListElement: crumbs.map((crumb, i) => ({
                   "@type": "ListItem",
                   position: i + 1,
