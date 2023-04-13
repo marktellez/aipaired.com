@@ -18,7 +18,8 @@ export const Layout = ({
     <>
       <Head>
         <title>{title}</title>
-
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
