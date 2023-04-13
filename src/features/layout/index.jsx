@@ -9,9 +9,9 @@ export const Layout = ({
   metaDescription = process.env.NEXT_PUBLIC_SITE_DESCRIPTION,
   siteName = process.env.NEXT_PUBLIC_SITE_NAME,
   siteImage = process.env.NEXT_PUBLIC_SITE_IMAGE,
+  canonicalUrl = process.env.NEXT_PUBLIC_HOST,
   publishedOn,
   modifiedOn,
-  canonicalUrl,
   article = false,
 }) => {
   return (
@@ -49,7 +49,7 @@ export const Layout = ({
         <meta name="theme-color" content="#ffffff" />
 
         <meta name="description" content={metaDescription} />
-        <link rel="canonical" href="https://aipaired.com/" />
+        <link rel="canonical" href={canonicalUrl} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Home" />

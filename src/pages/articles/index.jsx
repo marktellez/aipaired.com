@@ -10,7 +10,7 @@ import { Breadcrumbs } from "@/ui/breadcrumbs";
 
 export default function ArticlesIndex({ articles = [] }) {
   return (
-    <Layout>
+    <Layout canonicalUrl={`${process.env.NEXT_PUBLIC_HOST}/articles`}>
       <Container>
         <div className="mt-24 grid-cols-2 mx-auto max-w-3xl">
           <Breadcrumbs
