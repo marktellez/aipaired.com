@@ -21,6 +21,10 @@ export function HomepageAboutMe({}) {
             Meet Marcus Tellez
             <span className="text-sm"> AI Expert and Thought Leader</span>
           </h2>
+
+          <a target="_blank" href="https://github.com/marktellez/marktellez">
+            My Github
+          </a>
           <p className="">
             Marcus Tellez is a highly skilled software developer and AI expert
             with over 25 years of experience in the industry. Since 1997, Marcus
