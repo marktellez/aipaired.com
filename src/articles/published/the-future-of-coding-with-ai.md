@@ -38,7 +38,7 @@ AI can help developers discover fresh ideas and options. GPT's large language mo
 
 ## The Challenge of Embracing AI
 
-![The Challenge of Embracing AI](/images/articles/the-future-of-coding-with-ai/obstables-min.png)
+![The Challenge of Embracing AI](/images/articles/the-future-of-coding-with-ai/obstacles-min.png)
 
 Though having doubts, we must acknowledge the positive impact AI may have on the programming field. By embracing AI, programmers can maintain job stability and financial prosperity while keeping up with tech innovations. We'll explore a few top practices for code development using AI and the advantages it provides.
 
