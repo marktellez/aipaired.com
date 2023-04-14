@@ -33,7 +33,7 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
                 className="absolute top-0 min-h-[800px]"
                 width={1920}
                 height={800}
-                src={`/images/articles/${slug}/hero.webp`}
+                src={`/images/articles/${slug}/hero.png`}
                 alt={`blog_hero_${frontmatter.title}`}
               />
             </figure>
