@@ -14,7 +14,7 @@ One of the coolest things happening in AI is generative programming - it's like 
 
 ## Pros and Cons: AI in Coding 🎢
 
-![some fear AI could eventually replace human programmers](https://aipaired.com/images/articles/the-future-of-coding-with-ai/sad-programmer-kneeling-min.png)
+![some fear AI could eventually replace human programmers](https://aipaired.com/images/articles/the-future-of-programming-using-artificial-intelligence-chatgpt/sad-programmer-kneeling-min.png)
 
 There's a big question out there: "Will AI steal jobs from human developers?" 😟 But don't stress, fellow coders! AI's not ready to take our creative genius and problem-solving skills just yet. Plus, nothing beats a skilled developer with AI tools in their toolkit; they'll outshine AI alone and devs without these gadgets 🌟.
 
@@ -22,7 +22,7 @@ To stay ahead, developers must embrace AI tools and techniques. It's all about f
 
 ## The Perks of AI in Coding 🎁
 
-![automate mundane tasks with AI](https://aipaired.com/images/articles/the-future-of-coding-with-ai/automate-tasks-min.png)
+![automate mundane tasks with AI](https://aipaired.com/images/articles/the-future-of-programming-using-artificial-intelligence-chatgpt/automate-tasks-min.png)
 
 So, let's talk about how AI is shaking things up in the coding world. No more tedious tasks and slow development 🐢. AI saves the day with cool tools that automate the boring stuff, sharpen accuracy, and speed up the whole process ⚡. So, what's in it for you? Let's dive in:
 
@@ -32,7 +32,7 @@ So, let's talk about how AI is shaking things up in the coding world. No more te
 
 ## Embracing the AI Challenge 🤝
 
-![The Challenge of Embracing AI](https://aipaired.com/images/articles/the-future-of-coding-with-ai/obstacles-min.png)
+![The Challenge of Embracing AI](https://aipaired.com/images/articles/the-future-of-programming-using-artificial-intelligence-chatgpt/obstacles-min.png)
 
 Sure, doubts can creep in, but let's not overlook the sweet perks AI brings to the programming world 🍭. By giving AI a warm welcome, developers can secure their jobs, fatten their wallets, and stay on the cutting edge of tech 💡. Let's peek at some best practices for coding with AI and the tasty benefits you can expect:
 
@@ -44,7 +44,7 @@ Sure, doubts can creep in, but let's not overlook the sweet perks AI brings to t
 
 ## AI Wizardry for Future-Proof Programming 🧙‍♂️
 
-![the world goes digital](https://aipaired.com/images/articles/the-future-of-coding-with-ai/digital-world-min.png)
+![the world goes digital](https://aipaired.com/images/articles/the-future-of-programming-using-artificial-intelligence-chatgpt/digital-world-min.png)
 
 In today's digital frenzy, coding has become the lifeblood of various industries 💻. Keeping up with the latest tools and techniques can be tough, but AI's got your back. With AI in your toolkit, you can streamline your coding process and keep your skills razor-sharp 🔪.
 
@@ -56,13 +56,13 @@ AI's also got a soft spot for code quality. Developers can harness AI-powered to
 
 ## AI-Powered Generative Code: The Future of Programming 🚀
 
-![Generative Code Using AI](https://aipaired.com/images/articles/the-future-of-coding-with-ai/robots-building-robots-min.png)
+![Generative Code Using AI](https://aipaired.com/images/articles/the-future-of-programming-using-artificial-intelligence-chatgpt/robots-building-robots-min.png)
 
 If you're anything like me, the thought of AI code generation gets your heart racing 💓. Just imagine GPT-4 and GPT-5 working their magic, spinning code out of straightforward language prompts, and fitting the bill with almost no sweat off our brows. It's like a coder's ultimate fantasy coming to life! We'll be zipping through coding challenges like a hot knife through butter, creating snappy, tailor-made solutions with mind-blowing efficiency 🌪️. Hang on tight, fellow programmers—our wildest dreams are about to come true!
 
 ## The Future is Now 🌟
 
-![The Future is Now](https://aipaired.com/images/articles/the-future-of-coding-with-ai/future-now-min.png)
+![The Future is Now](https://aipaired.com/images/articles/the-future-of-programming-using-artificial-intelligence-chatgpt/future-now-min.png)
 
 Fellow coders, are you geared up for the coding revolution? With artificial intelligence (AI) and machine learning skyrocketing, we're scoring some seriously powerful tools 🛠️. Picture chatbots lending a hand with coding chores and GPT-5 cooking up snazzy new code—these are just a few ways AI is shaking up the programming landscape 🌍.
 
@@ -70,7 +70,7 @@ Sure, some devs might be a tad jittery about these up-and-coming technologies, b
 
 ## Tying It All Together: The Grand Finale
 
-![programming's future shines](https://aipaired.com/images/articles/the-future-of-coding-with-ai/kid-coding-min.png)
+![programming's future shines](https://aipaired.com/images/articles/the-future-of-programming-using-artificial-intelligence-chatgpt/kid-coding-min.png)
 
 As programmers, we're no strangers to change. To stay ahead of the game, we need to adapt and hone new skills constantly. One of the most exhilarating and promising developments in recent memory is none other than artificial intelligence (AI) 💥. By wielding AI tools and techniques, we can supercharge our work in all sorts of ways—from ramping up efficiency to fueling creativity and innovation 💡.
 

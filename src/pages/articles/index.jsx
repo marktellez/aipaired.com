@@ -39,11 +39,6 @@ export default function ArticlesIndex({ articles = [] }) {
           <h2 className="my-16">Read, learn, improve, make more money!</h2>
 
           {articles.map((article) => {
-            const url = `/articles/${article.title
-              .replace(/\s/g, "-")
-              .replace(/[^a-zA-Z\-]/g, "")
-
-              .toLowerCase()}`;
             return (
               <summary key={article.id} className="list-none">
                 <h3 className="font-hero text-2xl border-b-0 my-2">

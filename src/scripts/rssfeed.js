@@ -35,15 +35,7 @@ async function readMarkdownFile(path) {
   );
 
   articles.forEach(async (article, i) => {
-    const markdownFilePath = path.join(
-      __dirname,
-      "..",
-      "articles",
-      "published",
-      "the-future-of-coding-with-ai.md"
-    );
-
-    const { data } = matter(await readMarkdownFile(markdownFilePath));
+    const { data } = matter(await readMarkdownFile(article));
 
     feed.item({
       title: data.title,
