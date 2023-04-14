@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "rm -rf /opt/build/cache/* && next build && node ./src/scripts/sitemap.js && node ./src/scripts/rssfeed.js",
+    "build": "next build && node ./src/scripts/sitemap.js && node ./src/scripts/rssfeed.js",
     "start": "next start",
     "lint": "next lint"
   },
