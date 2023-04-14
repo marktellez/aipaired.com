@@ -68,3 +68,27 @@ h3 {
 a {
   @apply text-blue-700 hover:text-pink-500 transition duration-300;
 }
+
+.article {
+  @apply prose;
+  @apply text-gray-800;
+}
+
+.article ul {
+  @apply list-none;
+}
+
+.article li {
+  @apply p-0;
+  @apply my-4 mx-0;
+  @apply text-lg;
+}
+
+.article a {
+  @apply text-indigo-600;
+  @apply hover:text-indigo-900;
+}
+
+.article li::before {
+  content: "🌟 ";
+}

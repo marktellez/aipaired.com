@@ -5,7 +5,7 @@ import { Container } from "@/ui/page";
 import { DesktopMenu } from "./desktop";
 import { MobileMenu } from "./mobile";
 
-export const menuItems = [{ name: "AI Articles", href: "articles" }];
+export const menuItems = [{ name: "AI Articles", href: "/articles" }];
 
 export const MainMenu = () => {
   return (

@@ -58,7 +58,10 @@ export default function Article({ slug, frontmatter, html }) {
             </div>
             <div className="flex flex-col-reverse sm:flex-row items-start justify-center my-4">
               <div className="sm:w-2/3 text-prose max-w-2xl">
-                <div dangerouslySetInnerHTML={{ __html: html }} />
+                <div
+                  dangerouslySetInnerHTML={{ __html: html }}
+                  className="article"
+                />
               </div>
               <div className="w-full sm:w-1/3 sm:border p-3 sm:p-8 rounded-lg text-sm">
                 <div className="font-semibold sm:text-xl">

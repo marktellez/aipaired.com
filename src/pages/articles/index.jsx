@@ -16,23 +16,26 @@ export default function ArticlesIndex({ articles = [] }) {
           <Breadcrumbs
             crumbs={[{ name: "Articles", href: "/articles", current: true }]}
           />
-          {articles.map((article) => (
-            <summary key={article.id} className="list-none">
-              <h3 className="font-hero text-2xl border-b-0 my-2">
-                {article.title}
-              </h3>
-              <div>{article.readTime} read time</div>
-              <p className="my-3">{article.summary}</p>
-              <Link
-                href={`/articles/${article.title
-                  .replace(/\s/g, "-")
-                  .replace(/[^a-zA-Z\-]/g, "")
+          <h1 className="my-16">
+            Latest articles on Artificial Intelligence and Programming
+          </h1>
+          {articles.map((article) => {
+            const url = `/articles/${article.title
+              .replace(/\s/g, "-")
+              .replace(/[^a-zA-Z\-]/g, "")
 
-                  .toLowerCase()}`}>
-                continue to the article
-              </Link>
-            </summary>
-          ))}
+              .toLowerCase()}`;
+            return (
+              <summary key={article.id} className="list-none">
+                <h3 className="font-hero text-2xl border-b-0 my-2">
+                  <Link href={url}>{article.title}</Link>
+                </h3>
+                <div>{article.readTime} read time</div>
+                <p className="my-3">{article.summary}</p>
+                <Link href={url}>continue reading the full article</Link>
+              </summary>
+            );
+          })}
         </div>
       </Container>
     </Layout>
