@@ -1,18 +1,16 @@
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import matter from "gray-matter";
-import dynamic from "next/dynamic";
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkHtml from "remark-html";
 
-import glob from "glob";
 import { Layout } from "@/features/layout";
 import { Container } from "@/ui/page";
 import { Breadcrumbs } from "@/ui/breadcrumbs";
 
 import { ClockIcon, CalendarIcon } from "@heroicons/react/24/solid";
 
-import ReactMarkdown from "react-markdown";
-
-export default function Article({ slug, frontmatter, markdownBody }) {
+export default function Article({ slug, frontmatter, html }) {
   const url = process.env.NEXT_PUBLIC_HOST + "/articles/" + slug;
 
   return (
@@ -22,7 +20,7 @@ export default function Article({ slug, frontmatter, markdownBody }) {
       metaDescription={frontmatter.summary}
       publishedOn={frontmatter.publishedOn}
       canonicalUrl={url}>
-      <article ref={ref}>
+      <article>
         <>
           <div className="relative">
             <figure>
@@ -49,7 +47,10 @@ export default function Article({ slug, frontmatter, markdownBody }) {
                   { name: "Articles", href: "/articles", current: false },
                   {
                     name: frontmatter.title,
-                    href: window?.location.href,
+                    href:
+                      typeof window === "undefined"
+                        ? "#"
+                        : window.location.href,
                     current: true,
                   },
                 ]}
@@ -57,7 +58,7 @@ export default function Article({ slug, frontmatter, markdownBody }) {
             </div>
             <div className="flex flex-col-reverse sm:flex-row items-start justify-center my-4">
               <div className="sm:w-2/3 text-prose max-w-2xl">
-                <ReactMarkdown>{markdownBody}</ReactMarkdown>
+                <div dangerouslySetInnerHTML={{ __html: html }} />
               </div>
               <div className="w-full sm:w-1/3 sm:border p-3 sm:p-8 rounded-lg text-sm">
                 <div className="font-semibold sm:text-xl">
@@ -80,7 +81,7 @@ export default function Article({ slug, frontmatter, markdownBody }) {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   // extracting the slug from the context
   const { slug } = context.params;
 
@@ -89,26 +90,18 @@ export async function getStaticProps(context) {
   const md = await import(`@/articles/published/${slug}.md`);
   const { data, content } = matter(md.default);
 
+  const parsed = await unified()
+    .use(remarkParse)
+    .use(remarkHtml)
+    .process(content);
+
+  console.dir(parsed.toString());
+
   return {
     props: {
       slug,
       frontmatter: data,
-      markdownBody: content,
+      html: parsed.toString(),
     },
-  };
-}
-
-export async function getStaticPaths() {
-  const articles = glob.sync(`src/articles/published/**/*.md`);
-  const slugs = articles.map((file) =>
-    file.split("src/articles/published/")[1].slice(0, -3).trim()
-  );
-  const paths = slugs.map((slug) => {
-    return { params: { slug: slug } };
-  });
-
-  return {
-    paths,
-    fallback: false,
   };
 }

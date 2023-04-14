@@ -1,6 +1,4 @@
-const withTM = require("next-transpile-modules")(["react-markdown"]);
-
-module.exports = withTM({
+module.exports = {
   webpack: function (config) {
     config.module.rules.push({
       test: /\.md$/,
@@ -13,4 +11,4 @@ module.exports = withTM({
     locales: ["en"],
     defaultLocale: "en",
   },
-});
+};
