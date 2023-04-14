@@ -3,6 +3,11 @@ import matter from "gray-matter";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkHtml from "remark-html";
+import Link from "next/link";
+import glob from "glob";
+
+import fs from "fs/promises";
+import path from "path";
 
 import { Layout } from "@/features/layout";
 import { Container } from "@/ui/page";
@@ -10,7 +15,7 @@ import { Breadcrumbs } from "@/ui/breadcrumbs";
 
 import { ClockIcon, CalendarIcon } from "@heroicons/react/24/solid";
 
-export default function Article({ slug, frontmatter, html }) {
+export default function Article({ slug, frontmatter, html, articles = [] }) {
   const url = process.env.NEXT_PUBLIC_HOST + "/articles/" + slug;
 
   return (
@@ -58,23 +63,35 @@ export default function Article({ slug, frontmatter, html }) {
             </div>
             <div className="flex flex-col-reverse sm:flex-row items-start justify-center my-4">
               <div className="sm:w-2/3 text-prose max-w-2xl">
-                <div
-                  dangerouslySetInnerHTML={{ __html: html }}
-                  className="article"
-                />
+                <div dangerouslySetInnerHTML={{ __html: html }} />
               </div>
-              <div className="w-full sm:w-1/3 sm:border p-3 sm:p-8 rounded-lg text-sm">
-                <div className="font-semibold sm:text-xl">
-                  {frontmatter.author}
+
+              <div className="w-full sm:w-1/3 mx-8">
+                <div className="rounded-lg sm:border  p-3 sm:p-8  text-sm">
+                  <div className="font-semibold sm:text-xl">
+                    {frontmatter.author}
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <CalendarIcon className=" h-4" />
+                    {frontmatter.publishedOn}
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <ClockIcon className=" h-4" />
+                    {frontmatter.readTime} read time
+                  </div>
                 </div>
-                <div className="flex items-center gap-1">
-                  <CalendarIcon className=" h-4" />
-                  {frontmatter.publishedOn}
-                </div>
-                <div className="flex items-center gap-1">
-                  <ClockIcon className=" h-4" />
-                  {frontmatter.readTime} read time
-                </div>
+                {Boolean(articles.length) && (
+                  <div className="p-3 sm:p-8  text-sm">
+                    <h3 className="my-4 mx-0">Recent articles</h3>
+                    {articles.map((article) => (
+                      <div>
+                        <Link href={`/articles/${article.slug}`}>
+                          {article.title}
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </Container>
@@ -84,7 +101,7 @@ export default function Article({ slug, frontmatter, html }) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   // extracting the slug from the context
   const { slug } = context.params;
 
@@ -98,13 +115,45 @@ export async function getServerSideProps(context) {
     .use(remarkHtml)
     .process(content);
 
-  console.dir(parsed.toString());
+  const articlesDirectory = path.join(process.cwd(), "src/articles/published");
+  const fileNames = await fs.readdir(articlesDirectory);
+  const articles = await Promise.all(
+    fileNames.map(async (fileName) => {
+      const id = fileName.replace(/\.md$/, "");
+
+      const fullPath = path.join(articlesDirectory, fileName);
+      const fileContents = await fs.readFile(fullPath, "utf8");
+
+      const { data } = matter(fileContents);
+
+      return {
+        id,
+        ...data,
+      };
+    })
+  );
 
   return {
     props: {
       slug,
       frontmatter: data,
       html: parsed.toString(),
+      articles: articles.filter((article) => article.slug !== slug),
     },
+  };
+}
+
+export async function getStaticPaths() {
+  const articles = glob.sync(`src/articles/published/**/*.md`);
+  const slugs = articles.map((file) =>
+    file.split("src/articles/published/")[1].slice(0, -3).trim()
+  );
+  const paths = slugs.map((slug) => {
+    return { params: { slug: slug } };
+  });
+
+  return {
+    paths,
+    fallback: false,
   };
 }

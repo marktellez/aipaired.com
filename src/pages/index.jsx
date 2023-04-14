@@ -9,18 +9,16 @@ import { Container } from "@/ui/page";
 import { HomepageHero as Hero } from "@/features/homepage/hero";
 import { HomepageAboutMe as AboutMe } from "@/features/homepage/about-me";
 import { HomepageArticles as Articles } from "@/features/homepage/articles";
-import { HomepageCTA as CTA } from "@/features/homepage/cta";
 
 export default function Homepage({ articles = [] }) {
   return (
     <Layout canonicalUrl="https://aipaired.com">
       <Container>
         <Hero />
-        <AboutMe />
       </Container>
-      <CTA />
+      <Articles {...{ articles }} />
       <Container>
-        <Articles {...{ articles }} />
+        <AboutMe />
       </Container>
     </Layout>
   );
