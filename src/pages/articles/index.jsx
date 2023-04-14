@@ -10,7 +10,10 @@ import { Breadcrumbs } from "@/ui/breadcrumbs";
 
 export default function ArticlesIndex({ articles = [] }) {
   return (
-    <Layout canonicalUrl={`${process.env.NEXT_PUBLIC_HOST}/articles`}>
+    <Layout
+      canonicalUrl={`${process.env.NEXT_PUBLIC_HOST}/articles`}
+      title="Learn from these articles on how to incorporate AI into your development process"
+      metaDescription="If you want to stay up on the programming job market you need to know tools like chatgpt and codepilot. Check out these articles on the topic of ai assisted development!">
       <Container>
         <div className="mt-24 grid-cols-2 mx-auto max-w-3xl">
           <Breadcrumbs
