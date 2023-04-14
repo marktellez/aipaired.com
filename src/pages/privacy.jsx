@@ -3,7 +3,10 @@ import { Container } from "@/ui/page";
 
 export default function PrivacyPage({ articles = [] }) {
   return (
-    <Layout canonicalUrl="https://aipaired.com/privacy">
+    <Layout
+      canonicalUrl="https://aipaired.com/privacy"
+      title="Privacy policy | AIPaired"
+      metaDescription="Your privacy is important to us">
       <Container>
         <div className="mt-24">
           <h1> Privacy Policy for AIPaired</h1>
