@@ -1,2 +1,5 @@
 User-Agent: *
 Allow: /
+
+
+Sitemap: http://aipaired.com/sitemap.xml
