@@ -1,8 +1,8 @@
 ---
 title: Unleash Your Potential with the Ultimate Prompt Engineering Live Course!
 slug: master-the-future-of-coding-unleash-your-potential-with-the-ultimate-prompt-engineering-live-course
-publishedOn: April 14th 2023
-updatedOn: April 14th 2023
+publishedOn: 2023/04/14
+updatedOn: 2023/04/14
 author: Marcus Tellez
 readTime: 5 minutes
 summary: Master the future of coding with the Ultimate Prompt Engineering Live Course, an interactive, hands-on Discord-based training experience designed for developers looking to stay ahead in the rapidly evolving tech industry. Covering AI prompt concepts, GPT prompt engineering techniques, and powerful AI tools like ChatGPT, CodePilot, and MidJourney.

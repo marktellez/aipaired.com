@@ -1,8 +1,8 @@
 ---
 title: "Coding's Next Frontier: AI Unleashed"
 slug: the-future-of-programming-using-artificial-intelligence-chatgpt
-publishedOn: April 6th 2023
-updatedOn: April 13th 2023
+publishedOn: 2023/04/06
+updatedOn: 2023/04/13
 author: Marcus Tellez
 readTime: 6 minutes
 summary: Artificial intelligence (AI) is transforming the coding world, and developers who leverage its capabilities will gain an advantage in the job market. Utilizing AI methods, programmers can enjoy quicker development, greater accuracy, and heightened creativity.

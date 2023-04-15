@@ -34,14 +34,19 @@ async function readMarkdownFile(path) {
       `${process.env.NEXT_PUBLIC_HOST}/articles/${path.basename(file, ".md")}`
   );
 
-  articles.forEach(async (article, i) => {
-    const { data } = matter(await readMarkdownFile(article));
+  const articleContents = await Promise.all(
+    articles.map((article) => readMarkdownFile(article))
+  );
+
+  articleContents.forEach(async (content, i) => {
+    const { data } = matter(content);
 
     feed.item({
       title: data.title,
       description: data.summary,
       url: `${process.env.NEXT_PUBLIC_HOST}/articles/${data.slug}`,
       date: data.publishedOn,
+      author: "Marcus Tellez",
     });
   });
 
