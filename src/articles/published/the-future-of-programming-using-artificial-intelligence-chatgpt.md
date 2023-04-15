@@ -1,4 +1,5 @@
 ---
+pageTitle: What does the AI future hold for programmers?
 title: "Coding's Next Frontier: AI Unleashed"
 slug: the-future-of-programming-using-artificial-intelligence-chatgpt
 publishedOn: 2023/04/06

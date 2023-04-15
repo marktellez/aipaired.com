@@ -21,7 +21,7 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
   return (
     <Layout
       article
-      title={frontmatter.title}
+      title={frontmatter.pageTitle}
       metaDescription={frontmatter.summary}
       publishedOn={frontmatter.publishedOn}
       canonicalUrl={url}>

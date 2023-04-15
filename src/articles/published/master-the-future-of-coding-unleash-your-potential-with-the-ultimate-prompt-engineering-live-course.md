@@ -1,4 +1,5 @@
 ---
+pageTitle: Enroll in my LIVE prompt engineering course for FREE!
 title: Unleash Your Potential with the Ultimate Prompt Engineering Live Course!
 slug: master-the-future-of-coding-unleash-your-potential-with-the-ultimate-prompt-engineering-live-course
 publishedOn: 2023/04/14
