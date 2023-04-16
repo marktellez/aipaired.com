@@ -8,15 +8,23 @@ import { Container } from "@/ui/page";
 
 import { HomepageHero as Hero } from "@/features/homepage/hero";
 import { HomepageAboutMe as AboutMe } from "@/features/homepage/about-me";
-import { HomepageArticles as Articles } from "@/features/homepage/articles";
+import { Articles } from "@/features/articles";
 
 export default function Homepage({ articles = [] }) {
+  console.dir({ articles });
   return (
     <Layout canonicalUrl="https://aipaired.com">
       <Container>
         <Hero />
       </Container>
-      <Articles {...{ articles }} />
+      <div className="bg-gray-100 py-16">
+        <Container>
+          <h2>My Musings on AI for Programmers</h2>
+          <div className="sm:mt-24 grid-cols-2 mx-auto max-w-3xl">
+            <Articles {...{ articles }} />
+          </div>
+        </Container>
+      </div>
       <Container>
         <AboutMe />
       </Container>
@@ -27,6 +35,7 @@ export default function Homepage({ articles = [] }) {
 export async function getStaticProps(context) {
   const articlesDirectory = path.join(process.cwd(), "src/articles/published");
   const fileNames = await fs.readdir(articlesDirectory);
+
   const articles = await Promise.all(
     fileNames.map(async (fileName) => {
       const id = fileName.replace(/\.md$/, "");

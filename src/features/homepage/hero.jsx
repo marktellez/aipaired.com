@@ -4,13 +4,13 @@ import { Breadcrumbs } from "@/ui/breadcrumbs";
 export function HomepageHero({}) {
   return (
     <div className="">
-      <div className="pb-16 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
-        <div className="mx-auto max-w-2xl lg:mx-0">
+      <div className="pb-16 pt-10 sm:pb-16 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
+        <div className="mx-auto  lg:mx-0 w-full md:w-2/5">
           <Breadcrumbs crumbs={[]} />
           <h1 className="mt-4 text-3xl font-hero uppercase font-bold tracking-wide text-gray-900 sm:mt-8 sm:text-5xl">
             Leverage AI in your business today
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-lg leading-8 text-gray-600 ">
             AI promises to bring about unparalleled change in our world. Reflect
             on the deep influence the Internet has left on humanity, and imagine
             this effect intensified by a factor of 100. At AIPaired, we commit
@@ -26,7 +26,8 @@ export function HomepageHero({}) {
               <a
                 href="https://calendly.com/aipaired/30m-introduction-call"
                 target="_blank"
-                className="whitespace-nowrap font-semibold text-indigo-600">
+                className="whitespace-nowrap font-semibold text-indigo-600"
+              >
                 <span className="absolute inset-0" aria-hidden="true" />
                 Schedule a phone call with us{" "}
                 <span aria-hidden="true">&rarr;</span>
@@ -35,7 +36,7 @@ export function HomepageHero({}) {
           </div>
         </div>
       </div>
-      <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
+      <div className="relative lg:col-span-5  xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
         <Image
           className="aspect-w-3 aspect-h-2 w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-none lg:h-full"
           src={"/images/homepage/hero.webp"}

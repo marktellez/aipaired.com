@@ -7,13 +7,15 @@ import matter from "gray-matter";
 import { Layout } from "@/features/layout";
 import { Container } from "@/ui/page";
 import { Breadcrumbs } from "@/ui/breadcrumbs";
+import { Articles } from "@/features/articles";
 
 export default function ArticlesIndex({ articles = [] }) {
   return (
     <Layout
       canonicalUrl={`${process.env.NEXT_PUBLIC_HOST}/articles`}
       title="Articles on how to incorporate AI into your development process"
-      metaDescription="If you want to stay up on the programming job market you need to know tools like chatgpt and codepilot. Check out these articles on the topic of ai assisted development!">
+      metaDescription="If you want to stay up on the programming job market you need to know tools like chatgpt and codepilot. Check out these articles on the topic of ai assisted development!"
+    >
       <Container>
         <div className="mt-24 grid-cols-2 mx-auto max-w-3xl">
           <Breadcrumbs
@@ -41,22 +43,7 @@ export default function ArticlesIndex({ articles = [] }) {
 
           <h2 className="my-16">Read, learn, improve, make more money!</h2>
 
-          {articles.map((article) => {
-            return (
-              <summary key={article.id} className="list-none">
-                <h3 className="font-hero text-2xl border-b-0 my-2">
-                  <Link href={`/articles/${article.slug}`}>
-                    {article.title}
-                  </Link>
-                </h3>
-                <div>{article.readTime} read time</div>
-                <p className="my-3">{article.summary}</p>
-                <Link href={`/articles/${article.slug}`}>
-                  continue reading the full article
-                </Link>
-              </summary>
-            );
-          })}
+          <Articles {...{ articles }} />
 
           <div>
             <h2 id="attention-all-ai-assisted-programmers-and-prompt-engineers-">

@@ -24,7 +24,8 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
       title={frontmatter.pageTitle}
       metaDescription={frontmatter.summary}
       publishedOn={frontmatter.publishedOn}
-      canonicalUrl={url}>
+      canonicalUrl={url}
+    >
       <article>
         <>
           <div className="relative">
@@ -33,7 +34,7 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
                 className="absolute top-0 min-h-[800px]"
                 width={1920}
                 height={800}
-                src={`/images/articles/${slug}/hero.png`}
+                src={frontmatter.heroImage}
                 alt={`blog_hero_${frontmatter.title}`}
               />
             </figure>
@@ -63,9 +64,25 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
             </div>
             <div className="flex flex-col-reverse sm:flex-row items-start justify-center my-4">
               <div className="sm:w-2/3 text-prose max-w-2xl">
+                <div>
+                  {frontmatter.translations.es ? (
+                    <span>
+                      Continue reading in English, or{" "}
+                      <Link href={frontmatter.translations.es}>
+                        Cambiando a Español
+                      </Link>
+                    </span>
+                  ) : (
+                    <span>
+                      Continúa leyendo en inglés, o{" "}
+                      <Link href={frontmatter.translations.en}>
+                        switch to English
+                      </Link>
+                    </span>
+                  )}
+                </div>
                 <div dangerouslySetInnerHTML={{ __html: html }} />
               </div>
-
               <div className="w-full sm:w-1/3 mx-8">
                 <div className="rounded-lg sm:border  p-3 sm:p-8  text-sm">
                   <div className="font-semibold sm:text-xl">

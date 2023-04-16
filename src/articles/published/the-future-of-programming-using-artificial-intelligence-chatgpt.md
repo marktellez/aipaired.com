@@ -1,18 +1,21 @@
 ---
 pageTitle: What does the AI future hold for programmers?
 title: "Coding's Next Frontier: AI Unleashed"
+heroImage: /images/articles/the-future-of-programming-using-artificial-intelligence-chatgpt/hero.png
 slug: the-future-of-programming-using-artificial-intelligence-chatgpt
 publishedOn: 2023/04/06
 updatedOn: 2023/04/13
 author: Marcus Tellez
-readTime: 6 minutes
+readTime: 6 minutes read time
 summary: Artificial intelligence (AI) is transforming the coding world, and developers who leverage its capabilities will gain an advantage in the job market. Utilizing AI methods, programmers can enjoy quicker development, greater accuracy, and heightened creativity.
 keywords: prompt engineering course, prompt engineering training, ai prompt engineer, using chatgpt for programming, openai prompt engineering
+translations:
+  es: "que-depara-el-futuro-de-la-ia-para-los-programadores"
 ---
 
 Hey there, have you heard the news? Artificial intelligence (AI) is taking the coding scene by storm 🌪️. Developers wise enough to jump on the AI train will enjoy perks like faster coding, pinpoint accuracy, and a creative boost that'll blow your mind 🤯.
 
-One of the coolest things happening in AI is generative programming - it's like the secret sauce of the coding world 🍔. With rad tools like ChatGPT, GPT-4, and the upcoming GPT-5, developers can spin code from a simple program description 🧙‍♂️. It means crafting slicker, rock-solid code in no time, and businesses are gonna love it 💼.
+One of the coolest things happening in AI is generative programming - it's like the secret sauce of the coding world 🍔. With amazing tools like ChatGPT, GPT-4, and the upcoming GPT-5, developers can spin code from a simple program description 🧙‍♂️. It means crafting slicker, rock-solid code in no time, and businesses are gonna love it 💼.
 
 ## Pros and Cons: AI in Coding 🎢
 

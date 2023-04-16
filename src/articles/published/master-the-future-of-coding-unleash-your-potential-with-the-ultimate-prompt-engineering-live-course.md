@@ -1,13 +1,16 @@
 ---
 pageTitle: Enroll in my LIVE prompt engineering course for FREE!
 title: Unleash Your Potential with the Ultimate Prompt Engineering Live Course!
+heroImage: /images/articles/master-the-future-of-coding-unleash-your-potential-with-the-ultimate-prompt-engineering-live-course/hero.png
 slug: master-the-future-of-coding-unleash-your-potential-with-the-ultimate-prompt-engineering-live-course
 publishedOn: 2023/04/14
 updatedOn: 2023/04/14
 author: Marcus Tellez
-readTime: 5 minutes
+readTime: 5 minutes read time
 summary: Master the future of coding with the Ultimate Prompt Engineering Live Course, an interactive, hands-on Discord-based training experience designed for developers looking to stay ahead in the rapidly evolving tech industry. Covering AI prompt concepts, GPT prompt engineering techniques, and powerful AI tools like ChatGPT, CodePilot, and MidJourney.
 keywords: ai prompt course, prompt engineer course, prompt engineering course, prompt engineering training, gpt prompt engineering, using chatgpt for programming
+translations:
+  es: libera-tu-potencial-con-el-curso-en-vivo-definitivo-de-ingenieria-de-prompts
 ---
 
 AI advancements are revolutionizing the coding landscape, and staying ahead of the game is crucial for developers. This hands-on, live Discord-based training experience will boost your programming prowess and immerse you in the future of coding.
