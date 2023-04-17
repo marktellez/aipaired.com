@@ -108,7 +108,7 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
                   </div>
                   <div className="flex items-center gap-1">
                     <ClockIcon className=" h-4" />
-                    {frontmatter.readTime} read time
+                    {frontmatter.readTime}
                   </div>
                 </div>
                 {Boolean(filteredArticles.length) && (
