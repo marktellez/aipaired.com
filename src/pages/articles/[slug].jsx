@@ -9,6 +9,8 @@ import glob from "glob";
 import fs from "fs/promises";
 import path from "path";
 
+import { useRouter } from "next/router";
+
 import { Layout } from "@/features/layout";
 import { Container } from "@/ui/page";
 import { Breadcrumbs } from "@/ui/breadcrumbs";
@@ -16,7 +18,19 @@ import { Breadcrumbs } from "@/ui/breadcrumbs";
 import { ClockIcon, CalendarIcon } from "@heroicons/react/24/solid";
 
 export default function Article({ slug, frontmatter, html, articles = [] }) {
+  const router = useRouter();
+  const lang = router.query.lang || "en";
+
   const url = process.env.NEXT_PUBLIC_HOST + "/articles/" + slug;
+
+  const filteredArticles = articles.filter((article) => {
+    if (!article.hasOwnProperty("translations") && lang == "en") return true;
+
+    return (
+      article.hasOwnProperty("translations") &&
+      !article.translations.hasOwnProperty(lang)
+    );
+  });
 
   return (
     <Layout
@@ -64,7 +78,7 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
             </div>
             <div className="flex flex-col-reverse sm:flex-row items-start justify-center my-4">
               <div className="sm:w-2/3 text-prose max-w-2xl">
-                <div>
+                <div className="my-8 py-4">
                   {frontmatter.translations.es ? (
                     <span>
                       Continue reading in English, or{" "}
@@ -74,7 +88,7 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
                     </span>
                   ) : (
                     <span>
-                      Continúa leyendo en inglés, o{" "}
+                      Continúa leyendo en Español, o{" "}
                       <Link href={frontmatter.translations.en}>
                         switch to English
                       </Link>
@@ -97,10 +111,10 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
                     {frontmatter.readTime} read time
                   </div>
                 </div>
-                {Boolean(articles.length) && (
+                {Boolean(filteredArticles.length) && (
                   <div className="p-3 sm:p-8  text-sm">
                     <h3 className="my-4 mx-0">Recent articles</h3>
-                    {articles.map((article) => (
+                    {filteredArticles.map((article) => (
                       <div>
                         <Link href={`/articles/${article.slug}`}>
                           {article.title}
