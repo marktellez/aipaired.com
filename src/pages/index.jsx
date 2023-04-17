@@ -7,15 +7,16 @@ import { Layout } from "@/features/layout";
 import { Container } from "@/ui/page";
 
 import { HomepageHero as Hero } from "@/features/homepage/hero";
+import { HomepageCTA as CTA } from "@/features/homepage/cta";
 import { HomepageAboutMe as AboutMe } from "@/features/homepage/about-me";
 import { Articles } from "@/features/articles";
 
 export default function Homepage({ articles = [] }) {
-  console.dir({ articles });
   return (
     <Layout canonicalUrl="https://aipaired.com">
       <Container>
         <Hero />
+        <CTA />
       </Container>
       <div className="bg-gray-100 py-16">
         <Container>
