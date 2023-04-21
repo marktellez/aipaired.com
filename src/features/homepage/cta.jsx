@@ -5,7 +5,7 @@ export function HomepageCTA({}) {
       <a
         href="https://calendly.com/aipaired/30m-introduction-call"
         target="_blank"
-        className="whitespace-nowrap font-semibold text-indigo-600"
+        className="whitespace-nowrap font-semibold text-indigo-600 hover:text-indigo-900"
       >
         <span className="absolute inset-0" aria-hidden="true" />
         <span className="mx-1">Schedule a phone call with us</span>
