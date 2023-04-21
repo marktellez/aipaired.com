@@ -17,11 +17,11 @@ export const MainMenu = () => {
               <Link href={"/"}>
                 <div className="flex items-center gap-2 cursor-pointer ">
                   <div className="flex gap-2 items-center">
-                    <div className="relative w-8 h-8">
+                    <div className="relative w-10 h-10 -mb-1">
                       <Image
                         src="/images/header/logo.png"
                         layout="fill"
-                        alt="AIPaired.com | Ethical AI Powered Consulting"
+                        alt="AIPaired.com logo"
                       />
                     </div>
                     <div className="whitespace-nowrap text-2xl font-hero pt-1">
