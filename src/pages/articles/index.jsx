@@ -5,7 +5,7 @@ import Link from "next/link";
 import matter from "gray-matter";
 
 import { Layout } from "@/features/layout";
-import { Container } from "@/ui/page";
+import { Container, Row } from "@/ui/page";
 import { Breadcrumbs } from "@/ui/breadcrumbs";
 import { Articles } from "@/features/articles";
 
@@ -17,7 +17,7 @@ export default function ArticlesIndex({ articles = [] }) {
       metaDescription="If you want to stay up on the programming job market you need to know tools like chatgpt and codepilot. Check out these articles on the topic of ai assisted development!"
     >
       <Container>
-        <div className="mt-24 grid-cols-2 mx-auto max-w-3xl">
+        <Row className="">
           <Breadcrumbs
             crumbs={[{ name: "Articles", href: "/articles", current: true }]}
           />
@@ -71,7 +71,7 @@ export default function ArticlesIndex({ articles = [] }) {
               hope to see you there! 🚀
             </p>
           </div>
-        </div>
+        </Row>
       </Container>
     </Layout>
   );

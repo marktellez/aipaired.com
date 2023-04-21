@@ -14,7 +14,7 @@ import { Articles } from "@/features/articles";
 export default function Homepage({ articles = [] }) {
   return (
     <Layout canonicalUrl="https://aipaired.com">
-      <Container>
+      <Container full>
         <Hero />
       </Container>
 
