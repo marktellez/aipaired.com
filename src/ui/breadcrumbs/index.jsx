@@ -22,7 +22,7 @@ export function Breadcrumbs({ crumbs = [] }) {
         </NextHead>
       )}
 
-      <nav className="flex" aria-label="Breadcrumb">
+      <nav className="flex my-5" aria-label="Breadcrumb">
         <ol role="list" className="flex items-center space-x-4">
           <li>
             <div>
@@ -44,7 +44,8 @@ export function Breadcrumbs({ crumbs = [] }) {
                 />
                 <a
                   href={"/"}
-                  className="ml-4 text-sm font-medium text-gray-600 hover:text-pink-600">
+                  className="ml-4 text-sm font-medium text-gray-600 hover:text-pink-600"
+                >
                   Welcome to the future of software development
                 </a>
               </div>
@@ -60,7 +61,8 @@ export function Breadcrumbs({ crumbs = [] }) {
                 <a
                   href={crumb.href}
                   className="ml-4 text-sm font-medium text-gray-600 hover:text-pink-600"
-                  aria-current={crumb.current ? "page" : undefined}>
+                  aria-current={crumb.current ? "page" : undefined}
+                >
                   {crumb.name}
                 </a>
               </div>

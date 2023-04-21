@@ -16,8 +16,8 @@ export default function Homepage({ articles = [] }) {
     <Layout canonicalUrl="https://aipaired.com">
       <Container>
         <Hero />
-        <CTA />
       </Container>
+
       <div className="bg-gray-100 py-16">
         <Container>
           <h2>My Musings on AI for Programmers</h2>

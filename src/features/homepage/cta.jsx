@@ -8,7 +8,8 @@ export function HomepageCTA({}) {
         className="whitespace-nowrap font-semibold text-indigo-600"
       >
         <span className="absolute inset-0" aria-hidden="true" />
-        Schedule a phone call with us <span aria-hidden="true">&rarr;</span>
+        <span className="mx-1">Schedule a phone call with us</span>
+        <span aria-hidden="true">&rarr;</span>
       </a>
     </div>
   );
