@@ -19,7 +19,6 @@ export default function Homepage({ articles = [] }) {
       metaDescription="Experience AI Driven Development with AIPaired. Simplify coding, enhance productivity, and create innovative solutions with advanced AI tools and techniques.">
       <Container>
         <Hero />
-        <CTA />
       </Container>
       <div className="bg-gray-100 py-16">
         <Container>
