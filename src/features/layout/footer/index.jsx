@@ -23,7 +23,7 @@ export function Footer({}) {
                 hello@aipaired.com
               </div>
               <div>
-                <Link href="/privacy">privacy and cookies policy</Link>
+                <Link href="/privacy">Privacy and cookies policy</Link>
               </div>
             </div>
           </div>
