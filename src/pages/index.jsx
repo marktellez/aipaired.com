@@ -15,8 +15,8 @@ export default function Homepage({ articles = [] }) {
   return (
     <Layout
       canonicalUrl="https://aipaired.com"
-      title="AI Driven Development | Supercharge your programming | AIPaired"
-      metaDescription="Discover the power of AI Driven Development with AIPaired. Boost your productivity, streamline your coding process, and deliver innovative solutions with cutting-edge AI tools and techniques.">
+      title="AI Driven Development | Supercharge your programming!"
+      metaDescription="Experience AI Driven Development with AIPaired. Enhance productivity, simplify coding, and create innovative solutions using advanced AI tools and techniques.">
       <Container>
         <Hero />
         <CTA />
