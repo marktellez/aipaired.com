@@ -5,9 +5,7 @@ export function HomepageCTA({}) {
       <a
         href="https://calendly.com/aipaired/30m-introduction-call"
         target="_blank"
-        className="whitespace-nowrap font-semibold text-indigo-600"
-      >
-        <span className="absolute inset-0" aria-hidden="true" />
+        className="whitespace-nowrap font-semibold text-indigo-600">
         Schedule a phone call with us <span aria-hidden="true">&rarr;</span>
       </a>
     </div>

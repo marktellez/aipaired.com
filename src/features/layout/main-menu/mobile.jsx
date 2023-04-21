@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon } from "@heroicons/react/24/outline";
 
 export const MobileMenu = ({ menuItems = [] }) => {
   if (!menuItems.length) return "";
@@ -11,7 +11,11 @@ export const MobileMenu = ({ menuItems = [] }) => {
           <Menu.Button
             aria-label="Mobile menu"
             className="flex justify-end w-full p-2 text-sm font-medium text-white rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-            <Bars3Icon className="w-6 h-6" aria-hidden="true" />
+            <Bars3Icon
+              className="w-6 h-6"
+              aria-hidden="true"
+              alt="mobile menu icon"
+            />
           </Menu.Button>
           <Transition
             show={open}
