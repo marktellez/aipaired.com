@@ -32,7 +32,7 @@ export function HomepageHero({}) {
             <div className="absolute inset-0 -right-20 -top-20">
               <Image
                 className="object-cover"
-                src={"/images/homepage/hero.webp"}
+                src={"/images/homepage/hero.png"}
                 alt="AIPaired hero image"
                 layout="fill"
               />
