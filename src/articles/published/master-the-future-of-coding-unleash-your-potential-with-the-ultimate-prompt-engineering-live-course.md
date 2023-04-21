@@ -1,5 +1,6 @@
 ---
-pageTitle: Enroll in my LIVE prompt engineering course for FREE!
+pageTitle: FREE Prompt Engineering Course for AI Driven Development
+metaDescription: Master the future of coding with the Ultimate Prompt Engineering Live Course. Learn AI prompt concepts, GPT prompt engineering techniques, and use powerful AI tools. Enroll now for FREE to stay ahead in the tech industry with AI Driven Development.
 title: Unleash Your Potential with the Ultimate Prompt Engineering Live Course!
 heroImage: /images/articles/master-the-future-of-coding-unleash-your-potential-with-the-ultimate-prompt-engineering-live-course/hero.png
 slug: master-the-future-of-coding-unleash-your-potential-with-the-ultimate-prompt-engineering-live-course

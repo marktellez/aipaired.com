@@ -22,7 +22,7 @@ export function Breadcrumbs({ crumbs = [] }) {
         </NextHead>
       )}
 
-      <nav className="flex" aria-label="Breadcrumb">
+      <nav className="flex my-5" aria-label="Breadcrumb">
         <ol role="list" className="flex items-center space-x-4">
           <li>
             <div>

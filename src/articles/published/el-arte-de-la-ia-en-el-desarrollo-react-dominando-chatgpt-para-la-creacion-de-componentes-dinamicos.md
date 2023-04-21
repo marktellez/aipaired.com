@@ -1,6 +1,6 @@
 ---
-pageTitle: "Desbloqueando el Potencial del Desarrollo React Impulsado por IA con ChatGPT"
-metaDescription: "Conviértete en un maestro de la IA en el desarrollo React con ChatGPT. Aprende cómo optimizar tu flujo de trabajo, mantenerte actualizado sobre los avances en IA y construir una carrera exitosa como desarrollador React experto en IA."
+pageTitle: "Desarrollo de React Impulsado por IA con ChatGPT | Desbloquea tu Potencial"
+metaDescription: "Desbloquea tu potencial en el desarrollo de React impulsado por IA con ChatGPT. Simplifica tu flujo de trabajo, mantente al día con los avances en IA y construye una carrera exitosa como desarrollador de React experto en IA."
 title: "El Arte de la IA en el Desarrollo React: Dominando ChatGPT para la Creación de Componentes Dinámicos"
 heroImage: /images/articles/the-art-of-ai-in-react-development-mastering-chatgpt-for-dynamic-component-creation/hero.png
 slug: el-arte-de-la-ia-en-el-desarrollo-react-dominando-chatgpt-para-la-creacion-de-componentes-dinamicos

@@ -1,5 +1,6 @@
 ---
-pageTitle: ¿Qué depara el futuro de la IA para los programadores?
+pageTitle: "¿Qué depara el futuro de la IA para los programadores? | Desarrollo Impulsado por IA con GPT"
+metaDescription: "La inteligencia artificial (IA) está transformando el mundo de la programación y los programadores que aprovechen sus capacidades obtendrán una ventaja en el mercado laboral. Descubre el potencial del Desarrollo Impulsado por IA con GPT. Simplifica tu flujo de trabajo, mejora la precisión y desbloquea tu creatividad con el poder de GPT y la IA."
 title: "La próxima frontera de la programación: IA desatada"
 heroImage: /images/articles/the-future-of-programming-using-artificial-intelligence-chatgpt/hero.png
 slug: the-future-of-programming-using-artificial-intelligence-chatgpt

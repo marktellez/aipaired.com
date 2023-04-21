@@ -1,6 +1,6 @@
 ---
-pageTitle: "Unlocking the Potential of AI-Driven React Development with ChatGPT"
-metaDescription: "Become a master of AI in React development with ChatGPT. Learn how to streamline your workflow, stay up-to-date on AI advancements, and build a successful career as an AI-savvy React developer."
+pageTitle: "AI Driven React Development with ChatGPT | Unlock Your Potential"
+metaDescription: "Unlock your potential in AI driven React development with ChatGPT. Streamline your workflow, stay up-to-date on AI advancements, and build a successful career as an AI-savvy React developer."
 title: "The Art of AI in React Development: Mastering ChatGPT for Dynamic Component Creation"
 heroImage: /images/articles/the-art-of-ai-in-react-development-mastering-chatgpt-for-dynamic-component-creation/hero.png
 slug: the-art-of-ai-in-react-development-mastering-chatgpt-for-dynamic-component-creation

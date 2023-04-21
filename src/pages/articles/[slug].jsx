@@ -38,23 +38,25 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
       title={frontmatter.pageTitle}
       metaDescription={frontmatter.summary}
       publishedOn={frontmatter.publishedOn}
-      canonicalUrl={url}
-    >
-      <article>
+      canonicalUrl={url}>
+      <article className="-mt-[40px]">
         <>
-          <div className="relative">
+          <div className="relative h-screen">
             <figure>
               <Image
-                className="absolute top-0 min-h-[800px]"
+                // className="absolute top-0 min-h-[800px]"
+                className="h-screen object-cover"
                 width={1920}
                 height={800}
+                layout="fill"
                 src={frontmatter.heroImage}
                 alt={`blog_hero_${frontmatter.title}`}
               />
             </figure>
-            <div className="absolute top-1/2 w-full text-center text-white">
-              <div className="bg-black backdrop-blur-md bg-opacity-50">
-                <h1 className="sm:text-8xl font-hero drop-shadow-lg text-white">
+            <div className="absolute bottom-0 lg:bottom-10 w-full text-center text-white">
+              {/* <div className="absolute top-1/2 w-full text-center text-white"> */}
+              <div className="bg-black backdrop-blur-md bg-opacity-50 p-10">
+                <h1 className="sm:text-4xl md:text-6xl font-hero drop-shadow-lg text-white border-none">
                   {frontmatter.title}
                 </h1>
               </div>
@@ -97,7 +99,7 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: html }} />
               </div>
-              <div className="w-full sm:w-1/3 mx-8">
+              <div className="w-full sm:w-1/3">
                 <div className="rounded-lg sm:border  p-3 sm:p-8  text-sm">
                   <div className="font-semibold sm:text-xl">
                     {frontmatter.author}

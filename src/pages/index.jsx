@@ -15,15 +15,15 @@ export default function Homepage({ articles = [] }) {
   return (
     <Layout
       canonicalUrl="https://aipaired.com"
-      title="AI Driven Development | Supercharge your programming!"
-      metaDescription="Experience AI Driven Development with AIPaired. Enhance productivity, simplify coding, and create innovative solutions using advanced AI tools and techniques.">
+      title="AI Driven Development | Simplify Coding and Supercharge Productivity"
+      metaDescription="Experience AI Driven Development with AIPaired. Simplify coding, enhance productivity, and create innovative solutions with advanced AI tools and techniques.">
       <Container>
         <Hero />
         <CTA />
       </Container>
       <div className="bg-gray-100 py-16">
         <Container>
-          <h2>My Musings on AI for Programmers</h2>
+          <h2>Articles on AI Driven Development and more!</h2>
           <div className="sm:mt-24 grid-cols-2 mx-auto max-w-3xl">
             <Articles {...{ articles }} />
           </div>
