@@ -14,7 +14,8 @@ npx create-next-app your-app-name -e https://github.com/devmentorlive-youtube/ne
 
 ```
 cd your-app-name
-npm run dev
+yarn
+yarn run dev
 ```
 
 ## Folder structure
@@ -30,16 +31,13 @@ src
 
 This app uses a modified/simplified version of [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), better suited for modern web development.
 
-
 ### /ui
 
 This folder is for your "lego blocks", single purpose React components that can be combined together to make more complicated components, known as Features
 
-
 ### /features
 
 This folder is for more complex components, or features. Features are created by composing many UI components and usually, state
-
 
 ### /pages
 
