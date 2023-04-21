@@ -18,6 +18,9 @@ export const Layout = ({
     <>
       <Head>
         <title>{title}</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"></meta>
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

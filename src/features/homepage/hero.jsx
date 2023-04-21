@@ -11,13 +11,13 @@ export function HomepageHero({}) {
             Leverage AI in your business today
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600 ">
-            AI promises to bring about unparalleled change in our world. Reflect
-            on the deep influence the Internet has left on humanity, and imagine
-            this effect intensified by a factor of 100. At AIPaired, we commit
-            ourselves to helping businesses traverse the AI-driven landscape
-            with a strong focus on responsibility and ethics. Our knowledge
-            empowers organizations to not just adjust, but flourish in this
-            rapidly evolving technological epoch.
+            AI Driven Development has the potential to revolutionize the way we
+            write code and run our businesses, amplifying the transformative
+            impact of the Internet by 100 times. At AIPaired, we're dedicated to
+            helping businesses navigate this AI-driven landscape with a strong
+            emphasis on responsibility and ethics. Our expertise enables
+            organizations to not only adapt but thrive in this rapidly evolving
+            technological era.
           </p>
         </div>
       </div>
@@ -27,7 +27,7 @@ export function HomepageHero({}) {
           <Image
             className="h-full w-full object-cover lg:absolute lg:inset-0 lg:aspect-none"
             src={"/images/homepage/hero.webp"}
-            alt="AIPaired hero image"
+            alt="AIPaired hero image showcasing AI-driven development concept"
             layout="fill"
           />
         </div>
