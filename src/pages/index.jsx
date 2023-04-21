@@ -13,7 +13,10 @@ import { Articles } from "@/features/articles";
 
 export default function Homepage({ articles = [] }) {
   return (
-    <Layout canonicalUrl="https://aipaired.com">
+    <Layout
+      canonicalUrl="https://aipaired.com"
+      title="AI Driven Development | Supercharge your programming | AIPaired"
+      metaDescription="Discover the power of AI Driven Development with AIPaired. Boost your productivity, streamline your coding process, and deliver innovative solutions with cutting-edge AI tools and techniques.">
       <Container>
         <Hero />
         <CTA />
