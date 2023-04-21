@@ -28,14 +28,13 @@ export function HomepageHero({}) {
         <div className="w-1/2 hidden xl:block -mr-10">
           <div className="relative w-full lg:max-w-2xl h-screen">
             <div className="absolute inset-0 -right-20 -top-20">
-              {/* <div className="relative lg:col-span-5 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0"> */}
               <Image
                 className="object-cover"
                 src={"/images/homepage/hero.webp"}
                 alt="AIPaired hero image"
                 layout="fill"
-                width={1456}
-                height={816}
+                // width={1456}
+                // height={816}
               />
             </div>
           </div>
