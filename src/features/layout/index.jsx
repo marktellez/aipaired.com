@@ -21,6 +21,18 @@ export const Layout = ({
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0"></meta>
+        <link
+          rel="sitemap"
+          type="application/xml"
+          title="Sitemap"
+          href="/sitemap.xml"
+        />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="RSS Feed for aipaired.com"
+          href="/rss.xml"
+        />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

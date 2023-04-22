@@ -1,6 +1,6 @@
 ---
 pageTitle: Curso Gratuito de Ingeniería de Prompt para Desarrollo Impulsado por IA
-metaDescription: Domina el futuro de la programación con el Ultimate Prompt Engineering Live Course. Aprende conceptos de prompt de IA, técnicas de ingeniería de prompt GPT y utiliza herramientas poderosas de IA. ¡Inscríbete ahora GRATIS para mantenerte al frente en la industria tecnológica con el desarrollo impulsado por IA!
+metaDescription: Libera tu potencial con el curso en vivo definitivo de ingeniería de prompts. Únete a una experiencia de formación práctica e interactiva en Discord que cubre todo, desde los conceptos de prompts de IA hasta las técnicas de ingeniería de prompts GPT. Explora herramientas potentes de IA como ChatGPT, CodePilot y MidJourney, y colabora con expertos de la industria. Domina el futuro de la codificación con este curso de vanguardia.
 title: ¡Libera tu potencial con el curso en vivo definitivo de ingeniería de prompts!
 heroImage: /images/articles/master-the-future-of-coding-unleash-your-potential-with-the-ultimate-prompt-engineering-live-course/hero.png
 slug: libera-tu-potencial-con-el-curso-en-vivo-definitivo-de-ingenieria-de-prompts
