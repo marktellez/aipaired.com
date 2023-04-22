@@ -1,7 +1,7 @@
 export function HomepageCTA({}) {
   return (
     <div className="py-4 hover:bg-blue-500 hover:text-white text-center mt-16 mb-8 relative bg-white rounded-full px-3  text-sm leading-6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-      Are you looking for an AI developer specialist?{" "}
+      Are you looking for an AI driven developer specialist?{" "}
       <a
         href="https://calendly.com/aipaired/30m-introduction-call"
         target="_blank"
