@@ -15,12 +15,11 @@ export function Articles({ articles = [] }) {
   });
 
   return (
-    <div class="flex flex-col gap-8 ">
+    <div className="flex flex-col gap-8 ">
       {filteredArticles.map((article) => (
         <summary
           key={article.id}
-          className="list-none border-b border-gray-500 py-4"
-        >
+          className="list-none border-b border-gray-500 py-4">
           <Link href={`/articles/${article.slug}?lang=${lang}`}>
             <h3 className="font-hero text-2xl border-b-0 my-2 cursor-pointer hover:text-pink-500">
               {article.title}
