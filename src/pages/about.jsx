@@ -104,7 +104,7 @@ export default function AboutPage({}) {
         <h3 className="text-2xl font-medium">You can find me on the web:</h3>
         <ul className="my-4 text-xl">
           <li>
-            <a href="https://codementor.io">
+            <a href="https://www.codementor.io/@marktellez">
               I mentor developers at Codementor
             </a>
           </li>
