@@ -38,6 +38,7 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
       title={frontmatter.pageTitle}
       metaDescription={frontmatter.summary}
       publishedOn={frontmatter.publishedOn}
+      author={frontmatter.author}
       canonicalUrl={url}>
       <article className="-mt-[40px]">
         <>

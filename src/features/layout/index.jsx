@@ -10,6 +10,7 @@ export const Layout = ({
   siteName = process.env.NEXT_PUBLIC_SITE_NAME,
   siteImage = process.env.NEXT_PUBLIC_SITE_IMAGE,
   canonicalUrl = process.env.NEXT_PUBLIC_HOST,
+  author,
   publishedOn,
   modifiedOn,
   article = false,
@@ -18,9 +19,7 @@ export const Layout = ({
     <>
       <Head>
         <title>{title}</title>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="sitemap"
           type="application/xml"
@@ -81,6 +80,8 @@ export const Layout = ({
             ""
           )}
           {siteImage && <meta property="og:image" content={siteImage} />}
+          {author && <meta name="author" content={author} />}
+
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={title} />
           <meta name="twitter:description" content={metaDescription} />
