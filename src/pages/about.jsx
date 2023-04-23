@@ -100,6 +100,36 @@ export default function AboutPage({}) {
           to get in touch. Together, we can make a meaningful impact on the
           world.
         </p>
+
+        <h3 className="text-2xl font-medium">You can find me on the web:</h3>
+        <ul className="my-4 text-xl">
+          <li>
+            <a href="https://codementor.io">
+              I mentor developers at Codementor
+            </a>
+          </li>
+          <li>
+            <a href="https://devmentor.live">
+              Need a consultant? Find me at DevmentorLive
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com/@aipaired">
+              AI Paired Youtube Channel - Learn AI-Driven Programming
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com/devmentor.live">
+              DevmentorLive Youtube Channel - Learn ReactJS from an Expert
+            </a>
+          </li>
+          <li>
+            <a href="https://medium.com/@marcus-tellez">
+              I write articles about Artificial Intelligence advancements at
+              Medium
+            </a>
+          </li>
+        </ul>
       </Container>
     </Layout>
   );
