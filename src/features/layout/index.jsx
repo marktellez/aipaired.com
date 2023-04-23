@@ -82,6 +82,10 @@ export const Layout = ({
           )}
           {siteImage && <meta property="og:image" content={siteImage} />}
           <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={title} />
+          <meta name="twitter:description" content={metaDescription} />
+          <meta name="twitter:image" content={siteImage} />
+
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
