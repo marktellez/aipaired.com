@@ -81,12 +81,11 @@ export const Layout = ({
           )}
           {siteImage && <meta property="og:image" content={siteImage} />}
           {author && <meta name="author" content={author} />}
-
+          <meta name="publisher" content="AIPaired" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={title} />
           <meta name="twitter:description" content={metaDescription} />
           <meta name="twitter:image" content={siteImage} />
-
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
