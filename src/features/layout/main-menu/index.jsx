@@ -6,7 +6,7 @@ export const menuItems = [
   { name: "About me", href: "/about" },
 ];
 
-export const MainMenu = () => {
+export const MainMenu = ({ menuItems }) => {
   return (
     <>
       <DesktopMenu {...{ menuItems }} />

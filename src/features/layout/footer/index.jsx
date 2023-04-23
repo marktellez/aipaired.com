@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { EnvelopeOpenIcon } from "@heroicons/react/20/solid";
 import { Container } from "@/ui/page";
+import { menuItems } from "@/features/layout/main-menu";
 
 export function Footer({}) {
   return (
@@ -15,9 +16,21 @@ export function Footer({}) {
 
             <div className="w-full bg-purple-500 rounded-full h-1" />
             <div className=" sm:flex gap-10 py-3">
-              <div className="flex-grow">
+              <div className="">
                 &copy; 2022-{new Date().getFullYear()} AI Paired, llc
               </div>
+              <ul className="flex-grow items-center justify-center space-x-4 text-sm flex">
+                {menuItems.map((item, index) => (
+                  <li key={index}>
+                    <Link href={item.href}>
+                      <span className=" font-medium tracking-wide cursor-pointer hover:text-pink-500 transition duration-300">
+                        {item.name}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
               <div className="">
                 <a name="contact"></a>
                 hello@aipaired.com

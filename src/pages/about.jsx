@@ -1,3 +1,5 @@
+import { Layout } from "@/features/layout";
+import { Container } from "@/ui/page";
 export default function AboutPage({}) {
   return (
     <Layout
@@ -5,15 +7,13 @@ export default function AboutPage({}) {
       title="About Me - Consultant in Software Engineering and AI with a Passion for Human Experience"
       metaDescription="Meet Marcus Tellez, the AI and software development consultant. Discover his unique journey to becoming a leading expert in the field, passionate about building innovative solutions and optimizing human experience. Learn more now!">
       <Container>
-        <h1>Your Personal Software Engineering and AI Consultant</h1>
+        <h1>Marcus Tellez - Sr. Software Engineer and AI Consultant</h1>
         <h2>Introduction and Mission Statement</h2>
         <p>
           As a consultant in the software engineering and AI research field, my
           mission is to empower entrepreneurs and businesses to revolutionize
           their industries by harnessing the power of artificial intelligence
-          and innovative software solutions. Born in Mexico and brought to
-          California at just nine months old, I was raised in an environment
-          that instilled in me a strong work ethic and a passion for technology.
+          and innovative software solutions.
         </p>
         <p>
           I strive to bridge the gap between my deep-rooted passion for
@@ -25,6 +25,11 @@ export default function AboutPage({}) {
         </p>
         <h2>Early Life and Origins</h2>
         <p>
+          Born in Mexico and brought to California at just nine months old, I
+          was raised in an environment that instilled in me a strong work ethic
+          and a passion for technology.
+        </p>
+        <p>
           Ever since I was a child, I've been fascinated by technology. I would
           disassemble and reassemble various devices, which, although not always
           pleasing to my father, taught me valuable lessons about documentation
@@ -35,12 +40,12 @@ export default function AboutPage({}) {
         </p>
         <h2>Professional Background and Experience</h2>
         <p>
-          At 17, I landed my first paid programming job, working on a shopping
-          cart system for a local San Diego businessman. This opportunity led to
-          numerous other projects, and despite lacking a formal education, I
-          became a successful contract coder. One of my most memorable
-          experiences was working at Elon Musk's first company, where I had the
-          opportunity to contribute to groundbreaking projects.
+          At only 17, I landed my first paid programming job, working on a
+          shopping cart system for a local San Diego businessman. This
+          opportunity led to numerous other projects, and despite lacking a
+          formal education, I became a successful contract coder. One of my most
+          memorable experiences was working at Elon Musk's first company, where
+          I had the opportunity to contribute to groundbreaking projects.
         </p>
         <p>
           My experience spans various industries, from solar engineering to AI
