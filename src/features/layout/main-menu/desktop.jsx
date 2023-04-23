@@ -4,7 +4,9 @@ import Image from "next/image";
 import { Container } from "@/ui/page";
 import { EnvelopeIcon } from "@heroicons/react/20/solid";
 
-export const DesktopMenu = ({ menuItems = [] }) => {
+import { menuItems } from "@/features/layout/main-menu";
+
+export const DesktopMenu = ({}) => {
   return (
     <div className="hidden sm:flex sm:h-[50px]">
       <nav className="w-full fixed  left-0 top-0 z-50 text-white bg-gray-900 bg-opacity-70 backdrop-blur-md sm:p-1 sm:rounded-b-xl">
@@ -27,8 +29,8 @@ export const DesktopMenu = ({ menuItems = [] }) => {
               </div>
             </Link>
 
-            <div className="sm:flex items-center sm:flex-grow">
-              <ul className=" items-center justify-center space-x-4 text-sm flex-grow hidden sm:flex">
+            <div className="sm:flex items-center  flex-grow w-full">
+              <ul className="flex items-center justify-center space-x-4 text-sm flex-grow w-full">
                 {menuItems.map((item, index) => (
                   <li key={index}>
                     <Link href={item.href}>
@@ -39,7 +41,7 @@ export const DesktopMenu = ({ menuItems = [] }) => {
                   </li>
                 ))}
               </ul>
-              <ul className="hidden sm:flex">
+              <ul className="flex">
                 <li>
                   <Link href="mailto:hello@aipaired.com">
                     <div className="flex items-center gap-1  cursor-pointer hover:text-pink-500 transition duration-300">
