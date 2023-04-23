@@ -6,11 +6,15 @@ export const menuItems = [
   { name: "About me", href: "/about" },
 ];
 
-export const MainMenu = ({ menuItems }) => {
+export const MainMenu = ({}) => {
   return (
     <>
-      <DesktopMenu {...{ menuItems }} />
-      <MobileMenu {...{ menuItems }} />
+      <div className="hidden sm:block">
+        <DesktopMenu {...{ menuItems }} />
+      </div>
+      <div className="block sm:hidden">
+        <MobileMenu {...{ menuItems }} />
+      </div>
     </>
   );
 };

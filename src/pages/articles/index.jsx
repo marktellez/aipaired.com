@@ -26,7 +26,7 @@ export default function ArticlesIndex({ articles = [] }) {
 
           <p>
             Discover a world of insightful articles on prompt engineering,
-            AI-assisted programming, and the latest advancements in ChatGPT,
+            AI-driven development, and the latest advancements in ChatGPT,
             GPT-4, and GPT-5 technology. Our articles page is a treasure trove
             of knowledge for developers eager to leverage the power of
             artificial intelligence in their coding careers.

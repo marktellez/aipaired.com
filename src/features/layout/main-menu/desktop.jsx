@@ -4,11 +4,9 @@ import Image from "next/image";
 import { Container } from "@/ui/page";
 import { EnvelopeIcon } from "@heroicons/react/20/solid";
 
-import { menuItems } from "@/features/layout/main-menu";
-
-export const DesktopMenu = ({}) => {
+export const DesktopMenu = ({ menuItems = [] }) => {
   return (
-    <div className="hidden sm:flex sm:h-[50px]">
+    <div className="flex sm:h-[50px]">
       <nav className="w-full fixed  left-0 top-0 z-50 text-white bg-gray-900 bg-opacity-70 backdrop-blur-md sm:p-1 sm:rounded-b-xl">
         <Container>
           <div className="w-full flex items-center justify-between">
