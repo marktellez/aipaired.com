@@ -110,8 +110,8 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
                   ></ContinueReading>
                 </div>
 
-                <p className="border-t border-b py-7 capitalize-first m-0">
-                  {frontmatter.summary}
+                <p className="border-t border-b py-7 capitalize-first m-0 text-xl md:text-2xl md:-mx-14">
+                  {frontmatter.intro}
                 </p>
               </div>
               {/* 

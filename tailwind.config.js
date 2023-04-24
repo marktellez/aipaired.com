@@ -11,6 +11,16 @@ module.exports = {
         hero: ["Bebas Neue", "sans-serif"],
         sans: ["Airbnb Cereal", "sans-serif"],
       },
+      fontSize: {
+        "2xl": [
+          "1.5rem",
+          {
+            lineHeight: "2.3rem",
+            letterSpacing: "-0.01em",
+            fontWeight: "500",
+          },
+        ],
+      },
       colors: {
         red: {
           50: "#FFF5F5",
