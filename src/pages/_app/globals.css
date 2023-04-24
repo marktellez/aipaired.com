@@ -94,8 +94,8 @@ a {
 }
 
 .article img {
-  min-width: 110%;
-  margin-left: -7%;
+  @apply sm:min-w-[108%] sm:ml-[-4%];
+  /* min-width: 100vh; */
 }
 
 /* .capitalize-first::first-letter {

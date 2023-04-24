@@ -120,7 +120,7 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
                     Main content 
                     ///////////////////
               */}
-              <div className="md:col-span-2 order-2 pr-5">
+              <div className="md:col-span-2 order-2 md:pr-5">
                 <div className="text-prose">
                   <div
                     dangerouslySetInnerHTML={{ __html: html }}
