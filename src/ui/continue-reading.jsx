@@ -9,7 +9,7 @@ function ContinueReading({ translations }) {
     <>
       {translations.es ? (
         <div className="italic opacity-80">
-          <span className="flex gap-1">
+          <span className="flex gap-1 sm:flex-row flex-col">
             Continue reading in English, or
             <Link href={translations.es} scroll={false}>
               Cambiando a Español
@@ -18,7 +18,7 @@ function ContinueReading({ translations }) {
         </div>
       ) : (
         <div className="italic opacity-80">
-          <span className="flex gap-1">
+          <span className="flex gap-1 flex-row flex-col">
             Continúa leyendo en Español, o
             <Link href={translations.en} scroll={false}>
               switch to English
