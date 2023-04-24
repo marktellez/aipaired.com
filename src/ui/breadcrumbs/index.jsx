@@ -26,7 +26,7 @@ export function Breadcrumbs({ crumbs = [], white, className }) {
         className={`flex items-center md:justify-center overflow-x-scroll py-5 ${className}`}
         aria-label="Breadcrumb"
       >
-        <ol role="list" className="flex items-center space-x-4 ">
+        <ol role="list" className="flex items-center space-x-1 ">
           <li>
             <div>
               <a
@@ -63,7 +63,7 @@ export function Breadcrumbs({ crumbs = [], white, className }) {
             </li>
           )}
           {crumbs.map((crumb) => (
-            <li key={crumb.name}>
+            <li key={crumb.name} className="ml-1">
               <div className="flex items-center ">
                 <ChevronRightIcon
                   className={`h-5 w-5 flex-shrink-0 ${
@@ -73,7 +73,7 @@ export function Breadcrumbs({ crumbs = [], white, className }) {
                 />
                 <a
                   href={crumb.href}
-                  className={`ml-4 text-sm font-medium whitespace-nowrap md:whitespace-wrap ${
+                  className={`ml-1 text-sm font-medium whitespace-nowrap md:whitespace-wrap ${
                     white
                       ? "text-white hover:underline"
                       : "text-gray-600 hover:text-pink-600"
