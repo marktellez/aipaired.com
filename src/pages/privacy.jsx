@@ -59,8 +59,8 @@ export default function PrivacyPage({ articles = [] }) {
             <br />→ Users may opt out of the use of the DART cookie by visiting
             the Google ad and content network privacy policy at the following
             URL –
-            <a href="http://www.google.com/privacy_ads.html">
-              http://www.google.com/privacy_ads.html
+            <a href="https://myadcenter.google.com/?sasb=true">
+              Google ad center
             </a>
           </p>
           <p>
