@@ -1,5 +1,11 @@
+import Image from "next/image";
 import { Layout } from "@/features/layout";
 import { Container } from "@/ui/page";
+import { Star } from "@/ui/svgs/star";
+
+import { Reviews } from "@/features/reviews";
+import reviews from "@/data/reviews";
+
 export default function AboutPage({}) {
   return (
     <Layout
@@ -9,12 +15,26 @@ export default function AboutPage({}) {
       <Container>
         <h1>Marcus Tellez - Sr. Software Engineer and AI Consultant</h1>
 
-        <div className="flex items-center">
-          <div>
-            <a target="_blank" href="https://github.com/marktellez/marktellez">
-              My Github
-            </a>
+        <div className="flex justify-center w-full my-8">
+          <Image
+            src="/images/marcus-avatar.png"
+            alt="Marcus Tellez photo"
+            width={300}
+            height={300}
+            className="rounded-full"
+          />
+        </div>
+        <div className="flex justify-center w-full items-center gap-3 my-4">
+          <div>5.0</div>
+          <div className="flex text-blue-500 items-center">
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+            <Star />
           </div>
+
+          <span>(453 reviews)</span>
         </div>
 
         <h2>Introduction and Mission Statement</h2>
@@ -139,6 +159,18 @@ export default function AboutPage({}) {
             </a>
           </li>
         </ul>
+      </Container>
+
+      <Container>
+        <h2>What clients have to say about me</h2>
+        <div className="w-full justify-center flex">
+          <p className="prose text-sm text-center">
+            You can verify the majority of these reviews at{" "}
+            <a href="https://www.codementor.io/@marktellez">Codementor.io</a>{" "}
+            where I spent years helping companies and people just like you!
+          </p>
+        </div>
+        <Reviews {...{ reviews }} />
       </Container>
     </Layout>
   );
