@@ -8,6 +8,15 @@ export default function AboutPage({}) {
       metaDescription="Meet Marcus Tellez, the AI and software development consultant. Discover his unique journey to becoming a leading expert in the field, passionate about building innovative solutions and optimizing human experience. Learn more now!">
       <Container>
         <h1>Marcus Tellez - Sr. Software Engineer and AI Consultant</h1>
+
+        <div className="flex items-center">
+          <div>
+            <a target="_blank" href="https://github.com/marktellez/marktellez">
+              My Github
+            </a>
+          </div>
+        </div>
+
         <h2>Introduction and Mission Statement</h2>
         <p>
           As a consultant in the software engineering and AI research field, my
