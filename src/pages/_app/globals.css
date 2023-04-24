@@ -54,7 +54,7 @@ p {
 }
 
 h1 {
-  @apply text-4xl font-hero border-b-4 mt-8 leading-relaxed;
+  @apply text-4xl font-hero border-b-4 mt-8 leading-relaxed sm:pb-3 xl:pb-4;
 }
 
 h2 {
