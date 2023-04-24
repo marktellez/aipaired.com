@@ -81,31 +81,122 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
                 ]}
               />
             </div>
-            <div className="flex flex-col-reverse sm:flex-row items-start justify-center my-4">
-              <div className="sm:w-2/3 text-prose max-w-2xl">
-                <div className="mb-4">
-                  <ContinueReading
-                    translations={frontmatter.translations}
-                  ></ContinueReading>
-                </div>
-                <div dangerouslySetInnerHTML={{ __html: html }} />
+
+            <div className="grid md:grid-cols-3">
+              {/* 
+                  INTRO 
+                  ///////////////////
+              */}
+              <div className=" md:col-span-3 order-1">
+                <ContinueReading
+                  translations={frontmatter.translations}
+                ></ContinueReading>
+                <p className="m-auto border-t border-b py-7 capitalize-first mt-7">
+                  {frontmatter.summary}
+                </p>
               </div>
-              <div className="w-full sm:w-1/3">
-                <div className="rounded-lg sm:border  p-3 sm:p-8  text-sm">
-                  <div className="font-semibold sm:text-xl">
+              {/* 
+                    Main content 
+                    ///////////////////
+              */}
+              <div className="md:col-span-2 order-2 pr-5">
+                <div className="text-prose">
+                  <div
+                    dangerouslySetInnerHTML={{ __html: html }}
+                    className="article mt-10"
+                  />
+                </div>
+              </div>
+              {/* 
+                    Sidebar
+                    ///////////////////
+              */}
+              <div className="order-3">
+                <div className="border-l pt-7">
+                  <div className="px-3 sm:px-8 text-sm flex flex-row md:flex-col">
+                    <div className="mb-5">
+                      <Image
+                        src="/images/marcus-avatar.png"
+                        alt="Marcus Tellez photo"
+                        width={100}
+                        height={100}
+                        className="rounded-full"
+                      />
+                    </div>
+                    <div className="flex items-center font-semibold sm:text-xl">
+                      {frontmatter.author}
+                    </div>
+                    <div className="flex items-center gap-1 text-gray-500">
+                      <CalendarIcon className=" h-4" />
+                      {frontmatter.publishedOn}
+                    </div>
+                    <div className="flex items-center gap-1 text-gray-500">
+                      <ClockIcon className=" h-4" />
+                      {frontmatter.readTime}
+                    </div>
+                  </div>
+                  {Boolean(filteredArticles.length) && (
+                    <div className="px-3 sm:px-8  text-sm">
+                      <h3 className="my-4 mx-0">Recent articles</h3>
+                      <div className="flex flex-col gap-3">
+                        {filteredArticles.map((article) => (
+                          <div>
+                            <Link href={`/articles/${article.slug}`}>
+                              {article.title}
+                            </Link>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {/* <div>
+              <div className="mb-4">
+                <ContinueReading
+                  translations={frontmatter.translations}
+                ></ContinueReading>
+              </div>
+
+              <p className="m-auto border-t border-b py-7 capitalize-first">
+                {frontmatter.summary}
+              </p>
+            </div> */}
+            {/* <div className="flex flex-col-reverse sm:flex-row items-start justify-center mb-4 gap-5">
+              <div className="sm:w-2/3 text-prose max-w-2xl">
+                <div
+                  dangerouslySetInnerHTML={{ __html: html }}
+                  className="article mt-10"
+                />
+              </div>
+
+              <div className="w-full sm:w-1/3 border-l pt-7">
+                <div className="px-3 sm:px-8 text-sm flex flex-row md:flex-col">
+                  <div className="mb-5">
+                    <Image
+                      src="/images/marcus-avatar.png"
+                      alt="Marcus Tellez photo"
+                      width={100}
+                      height={100}
+                      className="rounded-full"
+                    />
+                  </div>
+                  <div className="flex items-center font-semibold sm:text-xl">
                     {frontmatter.author}
                   </div>
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-1 text-gray-500">
                     <CalendarIcon className=" h-4" />
                     {frontmatter.publishedOn}
                   </div>
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-1 text-gray-500">
                     <ClockIcon className=" h-4" />
                     {frontmatter.readTime}
                   </div>
                 </div>
                 {Boolean(filteredArticles.length) && (
-                  <div className="p-3 sm:p-8  text-sm">
+                  <div className="px-3 sm:px-8  text-sm">
                     <h3 className="my-4 mx-0">Recent articles</h3>
                     {filteredArticles.map((article) => (
                       <div>
@@ -117,7 +208,7 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
                   </div>
                 )}
               </div>
-            </div>
+            </div> */}
           </Container>
         </>
       </article>

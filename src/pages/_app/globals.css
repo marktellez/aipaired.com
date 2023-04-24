@@ -92,3 +92,13 @@ a {
 .article li::before {
   content: "🌟 ";
 }
+
+.article img {
+  min-width: 110%;
+  margin-left: -7%;
+}
+
+/* .capitalize-first::first-letter {
+  text-transform: uppercase;
+  @apply text-4xl;
+} */
