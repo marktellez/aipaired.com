@@ -20,10 +20,10 @@ export default function Homepage({ articles = [] }) {
       <Container>
         <Hero />
       </Container>
-      <div className="bg-gray-100 py-16">
+      <div className="bg-gray-100 py-8">
         <Container>
           <h2>Articles on AI Driven Development and more!</h2>
-          <div className="sm:mt-24 grid-cols-2 mx-auto max-w-3xl">
+          <div className=" grid-cols-2 mx-auto my-8">
             <Articles {...{ articles }} />
           </div>
         </Container>

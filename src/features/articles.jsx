@@ -31,7 +31,10 @@ export function Articles({ articles = [] }) {
             </h3>
           </Link>
 
-          <div>{article.readTime}</div>
+          <div className="flex items-center gap-4">
+            <div>By {article.author}</div>
+            <div>{article.readTime}</div>
+          </div>
           <p className="my-3">
             {article.summary.length > shortestSummaryLength
               ? `${article.summary.slice(0, shortestSummaryLength)}...`

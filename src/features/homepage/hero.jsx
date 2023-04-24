@@ -14,15 +14,14 @@ export function HomepageHero({}) {
               Leverage AI in your business today
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 ">
-              The era of AI Driven Development is upon us, and its potential for
-              transformational impact is unprecedented. Just as the Internet
-              revolutionized the way we live and work, AI promises to take it a
-              step further. At AIPaired, we understand the importance of
-              responsible and ethical AI adoption, and we are dedicated to
-              helping businesses navigate this new landscape. Our expertise and
-              insights empower organizations to not only adapt, but also thrive
-              in this rapidly changing technological epoch. Join us in embracing
-              the power of AI to shape a better future for all.
+              The era of AI Driven Development is here, and it has the potential
+              to revolutionize the way businesses operate. At AIPaired, we are
+              committed to giving entrepreneurs and companies the tools and
+              insights they need to embrace AI and drive their businesses
+              forward. Our expertise can help organizations unlock the power of
+              AI to increase productivity, creativity and revenue. Join us in
+              taking advantage of this new technology to shape an even brighter
+              future.
             </p>
             <CTA />
           </div>
