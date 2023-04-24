@@ -59,7 +59,7 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
             <div className="absolute bottom-0 lg:bottom-10 w-full text-center text-white">
               {/* <div className="absolute top-1/2 w-full text-center text-white"> */}
               <div className="bg-black backdrop-blur-md bg-opacity-50 p-10">
-                <div className="opacity-70 hover:opacity-100">
+                {/* <div className="opacity-70 hover:opacity-100">
                   <Breadcrumbs
                     white
                     className=""
@@ -75,7 +75,7 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
                       },
                     ]}
                   />
-                </div>
+                </div> */}
 
                 <h1 className="sm:text-4xl md:text-6xl font-hero drop-shadow-lg text-white border-none">
                   {frontmatter.title}
@@ -84,7 +84,7 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
             </div>
           </div>
           <Container>
-            {/* <div className="flex items-center justify-center my-3">
+            <div className="flex items-center my-3">
               <Breadcrumbs
                 crumbs={[
                   { name: "Articles", href: "/articles", current: false },
@@ -98,7 +98,7 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
                   },
                 ]}
               />
-            </div> */}
+            </div>
 
             <div className="grid md:grid-cols-3">
               {/* 
