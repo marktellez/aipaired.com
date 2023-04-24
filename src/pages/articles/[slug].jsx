@@ -15,8 +15,7 @@ import { Layout } from "@/features/layout";
 import { Container } from "@/ui/page";
 import { Breadcrumbs } from "@/ui/breadcrumbs";
 import ContinueReading from "@/ui/continue-reading";
-
-import { ClockIcon, CalendarIcon } from "@heroicons/react/24/solid";
+import ArticleInfo from "features/articleInfo";
 
 export default function Article({ slug, frontmatter, html, articles = [] }) {
   const router = useRouter();
@@ -47,7 +46,6 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
           <div className="relative h-screen">
             <figure>
               <Image
-                // className="absolute top-0 min-h-[800px]"
                 className="h-screen object-cover"
                 width={1920}
                 height={800}
@@ -133,33 +131,12 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
                     ///////////////////
               */}
               <div className="order-3">
-                <div className="border-l pt-7">
-                  <div className="px-3 sm:px-8 text-sm flex flex-row md:flex-col">
-                    <div className="mb-5">
-                      <Image
-                        src="/images/marcus-avatar.png"
-                        alt="Marcus Tellez photo"
-                        width={100}
-                        height={100}
-                        className="rounded-full"
-                      />
-                    </div>
-                    <div className="flex items-center font-semibold sm:text-xl">
-                      {frontmatter.author}
-                    </div>
-                    <div className="flex items-center gap-1 text-gray-500">
-                      <CalendarIcon className=" h-4" />
-                      {frontmatter.publishedOn}
-                    </div>
-                    <div className="flex items-center gap-1 text-gray-500">
-                      <ClockIcon className=" h-4" />
-                      {frontmatter.readTime}
-                    </div>
-                  </div>
+                <div className="border-t md:border-t-0 mt-10 md:mt-0 md:border-l pt-7 md:pl-5">
+                  <ArticleInfo frontmatter={frontmatter} />
                   {Boolean(filteredArticles.length) && (
-                    <div className="px-3 sm:px-8  text-sm">
+                    <div className="text-sm">
                       <h3 className="my-4 mx-0">Recent articles</h3>
-                      <div className="flex flex-col gap-3">
+                      <div className="flex flex-col gap-1 md:gap-3">
                         {filteredArticles.map((article) => (
                           <div>
                             <Link href={`/articles/${article.slug}`}>
