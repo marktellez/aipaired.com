@@ -1,10 +1,12 @@
 import Image from "next/image";
 import { ClockIcon, CalendarIcon } from "@heroicons/react/24/solid";
 
-function ArticleInfo({ frontmatter }) {
+function ArticleInfo({ frontmatter, className }) {
   return (
     <>
-      <div className="text-sm flex flex-row md:flex-col gap-3 md:gap-1">
+      <div
+        className={`text-sm flex flex-row md:flex-col gap-3 md:gap-1 ${className}`}
+      >
         <div className="hidden md:block">
           <Image
             src="/images/marcus-avatar.png"

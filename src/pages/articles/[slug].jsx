@@ -113,6 +113,11 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
                   {frontmatter.summary}
                 </p>
               </div>
+
+              <ArticleInfo
+                frontmatter={frontmatter}
+                className="md:hidden order-2 mt-3 border-b pb-2"
+              />
               {/* 
                     Main content 
                     ///////////////////
@@ -131,7 +136,10 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
               */}
               <div className="order-3">
                 <div className="border-t md:border-t-0 mt-10 md:mt-0 md:border-l pt-7 md:pl-5">
-                  <ArticleInfo frontmatter={frontmatter} />
+                  <ArticleInfo
+                    frontmatter={frontmatter}
+                    className="hidden md:block"
+                  />
                   {Boolean(filteredArticles.length) && (
                     <div className="text-sm">
                       <h3 className="my-4 mx-0">Recent articles</h3>
