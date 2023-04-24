@@ -14,6 +14,7 @@ import { useRouter } from "next/router";
 import { Layout } from "@/features/layout";
 import { Container } from "@/ui/page";
 import { Breadcrumbs } from "@/ui/breadcrumbs";
+import ContinueReading from "@/ui/continue-reading";
 
 import { ClockIcon, CalendarIcon } from "@heroicons/react/24/solid";
 
@@ -39,7 +40,8 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
       metaDescription={frontmatter.summary}
       publishedOn={frontmatter.publishedOn}
       author={frontmatter.author}
-      canonicalUrl={url}>
+      canonicalUrl={url}
+    >
       <article className="-mt-[40px]">
         <>
           <div className="relative h-screen">
@@ -81,22 +83,10 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
             </div>
             <div className="flex flex-col-reverse sm:flex-row items-start justify-center my-4">
               <div className="sm:w-2/3 text-prose max-w-2xl">
-                <div className="my-8 py-4">
-                  {frontmatter.translations.es ? (
-                    <span>
-                      Continue reading in English, or{" "}
-                      <Link href={frontmatter.translations.es}>
-                        Cambiando a Español
-                      </Link>
-                    </span>
-                  ) : (
-                    <span>
-                      Continúa leyendo en Español, o{" "}
-                      <Link href={frontmatter.translations.en}>
-                        switch to English
-                      </Link>
-                    </span>
-                  )}
+                <div className="mb-4">
+                  <ContinueReading
+                    translations={frontmatter.translations}
+                  ></ContinueReading>
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: html }} />
               </div>

@@ -58,7 +58,7 @@ h1 {
 }
 
 h2 {
-  @apply text-3xl border-b-4 font-hero mt-16 border-gray-900;
+  @apply text-3xl border-b-4 font-hero mt-16 border-gray-900 pb-1;
 }
 
 h3 {
