@@ -1,5 +1,5 @@
 ---
-pageTitle: "What Does the AI Future Hold for Programmers? | AI Driven Development with GPT"
+pageTitle: "What Does the AI Future Hold for Programmers? AI Driven Development with GPT"
 metaDescription: "Artificial intelligence (AI) is transforming the coding world, and developers who leverage its capabilities will gain an advantage in the job market. Discover the potential of AI driven development with GPT. Streamline your workflow, enhance accuracy, and unlock your creativity with the power of GPT and AI."
 title: "Coding's Next Frontier: AI Unleashed"
 heroImage: /images/articles/the-future-of-programming-using-artificial-intelligence-chatgpt/hero.png
