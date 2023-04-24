@@ -109,9 +109,8 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
                     translations={frontmatter.translations}
                   ></ContinueReading>
                 </div>
-
                 <p className="border-t border-b py-7 capitalize-first m-0 text-xl md:text-2xl md:-mx-14">
-                  {frontmatter.intro}
+                  {frontmatter.summary}
                 </p>
               </div>
               {/* 
@@ -122,7 +121,7 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
                 <div className="text-prose">
                   <div
                     dangerouslySetInnerHTML={{ __html: html }}
-                    className="article mt-10"
+                    className="article mt-5"
                   />
                 </div>
               </div>
