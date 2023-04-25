@@ -23,7 +23,7 @@ export function Breadcrumbs({ crumbs = [], white, className }) {
       )}
 
       <nav
-        className={`flex items-center md:justify-center  py-5 ${className}`}
+        className={`flex items-center  ${className ? className : ""}`}
         aria-label="Breadcrumb">
         <ol role="list" className="flex items-center space-x-1">
           <li>

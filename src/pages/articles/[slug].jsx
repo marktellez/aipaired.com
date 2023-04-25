@@ -39,8 +39,7 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
       metaDescription={frontmatter.summary}
       publishedOn={frontmatter.publishedOn}
       author={frontmatter.author}
-      canonicalUrl={url}
-    >
+      canonicalUrl={url}>
       <article className="-mt-[40px]">
         <>
           <div className="relative h-screen">
@@ -54,27 +53,8 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
                 alt={`blog_hero_${frontmatter.title}`}
               />
             </figure>
-            <div className="absolute bottom-0 lg:bottom-10 w-full text-center text-white">
-              {/* <div className="absolute top-1/2 w-full text-center text-white"> */}
+            <div className="absolute bottom-0  w-full text-center text-white">
               <div className="bg-black backdrop-blur-md bg-opacity-50 p-10">
-                {/* <div className="opacity-70 hover:opacity-100">
-                  <Breadcrumbs
-                    white
-                    className=""
-                    crumbs={[
-                      { name: "Articles", href: "/articles", current: false },
-                      {
-                        name: frontmatter.title,
-                        href:
-                          typeof window === "undefined"
-                            ? "#"
-                            : window.location.href,
-                        current: true,
-                      },
-                    ]}
-                  />
-                </div> */}
-
                 <h1 className="sm:text-4xl md:text-6xl font-hero drop-shadow-lg text-white border-none">
                   {frontmatter.title}
                 </h1>
@@ -82,7 +62,7 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
             </div>
           </div>
           <Container>
-            <div className="flex items-center my-3">
+            <div className="mt-8">
               <Breadcrumbs
                 crumbs={[
                   { name: "Articles", href: "/articles", current: false },
@@ -99,15 +79,10 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
             </div>
 
             <div className="grid md:grid-cols-3">
-              {/* 
-                  INTRO 
-                  ///////////////////
-              */}
               <div className=" md:col-span-3 order-1">
-                <div className="my-7">
+                <div className="my-4">
                   <ContinueReading
-                    translations={frontmatter.translations}
-                  ></ContinueReading>
+                    translations={frontmatter.translations}></ContinueReading>
                 </div>
                 <p className="border-t border-b py-7 mb-0 text-xl md:text-2xl md:-mx-14">
                   {frontmatter.summary}

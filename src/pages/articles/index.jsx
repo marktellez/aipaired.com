@@ -16,11 +16,11 @@ export default function ArticlesIndex({ articles = [] }) {
       title="Articles on how to incorporate AI into your development process"
       metaDescription="If you want to stay up on the programming job market you need to know tools like chatgpt and codepilot. Check out these articles on the topic of ai assisted development!">
       <Container>
-        <div className="mt-24 grid-cols-2 mx-auto max-w-3xl">
+        <div className="mt-16 grid-cols-2 mx-auto max-w-3xl">
           <Breadcrumbs
             crumbs={[{ name: "Articles", href: "/articles", current: true }]}
           />
-          <h1 className="my-16">
+          <h1 className="my-8">
             Latest articles on Artificial Intelligence and Programming
           </h1>
 
