@@ -65,20 +65,21 @@ h3 {
 .prose {
   /* h1 */
   /* h2 */
-  @apply prose-h2:text-3xl prose-h2:leading-normal prose-h2:border-none prose-h2:mb-5;
+  @apply prose-h2:text-2xl sm:prose-h2:text-2xl lg:prose-h2:text-3xl prose-h2:leading-normal prose-h2:border-none;
   @apply prose-h2:mb-7 prose-h2:mt-14;
   @apply prose-h2:normal-case;
   @apply prose-h2:text-black;
   /* @apply prose-h2:border-l prose-h2:border-pink; */
 
   /* h3 */
-  @apply prose-h3:text-2xl prose-h3:border-none prose-h3:leading-tight;
+  @apply prose-h3:text-lg sm:prose-h3:text-xl lg:prose-h3:text-2xl prose-h3:border-none prose-h3:leading-tight;
   @apply prose-h3:border-none prose-h3:leading-normal;
   @apply prose-h3:mb-4 prose-h3:mt-10;
   @apply prose-h3:text-black-800;
 
   /* h4 */
-  @apply prose-h4:text-xl;
+  @apply prose-h4:text-base sm:prose-h4:text-lg lg:prose-h4:text-xl;
+  @apply prose-h4:text-black-700 lg:prose-h4:text-black-800;
 
   /* p */
   @apply prose-p:leading-normal;

@@ -4,7 +4,7 @@
 
 - Responsive breadcrumbs
   - Make into a dropdown on mobile
-- H2 and H3 look very similar
+- Make rich block for "Recent articles" with photo and description
 
 ## Think about
 
