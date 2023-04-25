@@ -12,7 +12,7 @@ function ContinueReading({ translations }) {
           <span className="flex gap-1 sm:flex-row flex-col">
             Continue reading in English, or
             <Link href={translations.es} scroll={false}>
-              Cambiando a Español
+              cambiando a Español
             </Link>
           </span>
         </div>
@@ -27,27 +27,6 @@ function ContinueReading({ translations }) {
         </div>
       )}
     </>
-    // <>
-    //   {translations.es ? (
-    //     <Button className={style.button}>
-    //       <span className="flex gap-1">
-    //         Continue reading in English, or
-    //         <Link href={translations.es} scroll={false}>
-    //           Cambiando a Español
-    //         </Link>
-    //       </span>
-    //     </Button>
-    //   ) : (
-    //     <Button className={style.button}>
-    //       <span className="flex gap-1">
-    //         Continúa leyendo en Español, o
-    //         <Link href={translations.en} scroll={false}>
-    //           switch to English
-    //         </Link>
-    //       </span>
-    //     </Button>
-    //   )}
-    // </>
   );
 }
 export default ContinueReading;

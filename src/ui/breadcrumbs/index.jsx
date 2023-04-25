@@ -23,17 +23,15 @@ export function Breadcrumbs({ crumbs = [], white, className }) {
       )}
 
       <nav
-        className={`flex items-center md:justify-center overflow-x-scroll py-5 ${className}`}
-        aria-label="Breadcrumb"
-      >
-        <ol role="list" className="flex items-center space-x-1 ">
+        className={`flex items-center md:justify-center  py-5 ${className}`}
+        aria-label="Breadcrumb">
+        <ol role="list" className="flex items-center space-x-1">
           <li>
             <div>
               <a
                 href="/"
                 className={`
-              ${white ? "text-white" : "text-gray-600"}  hover:text-pink-600 `}
-              >
+              ${white ? "text-white" : "text-gray-600"}  hover:text-pink-600 `}>
                 <HomeIcon
                   className="h-5 w-5 flex-shrink-0"
                   aria-hidden="true"
@@ -55,8 +53,7 @@ export function Breadcrumbs({ crumbs = [], white, className }) {
                   href={"/"}
                   className={`ml-4 text-sm font-medium ${
                     white ? "text-white" : "text-gray-600"
-                  } hover:text-pink-600`}
-                >
+                  } hover:text-pink-600`}>
                   Welcome to the future of software development
                 </a>
               </div>
@@ -78,8 +75,7 @@ export function Breadcrumbs({ crumbs = [], white, className }) {
                       ? "text-white hover:underline"
                       : "text-gray-600 hover:text-pink-600"
                   }  `}
-                  aria-current={crumb.current ? "page" : undefined}
-                >
+                  aria-current={crumb.current ? "page" : undefined}>
                   {crumb.name}
                 </a>
               </div>
