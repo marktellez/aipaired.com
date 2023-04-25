@@ -14,8 +14,8 @@ import { useRouter } from "next/router";
 import { Layout } from "@/features/layout";
 import { Container } from "@/ui/page";
 import { Breadcrumbs } from "@/ui/breadcrumbs";
-
-import { ClockIcon, CalendarIcon } from "@heroicons/react/24/solid";
+import ContinueReading from "@/ui/continue-reading";
+import ArticleInfo from "features/articleInfo";
 
 export default function Article({ slug, frontmatter, html, articles = [] }) {
   const router = useRouter();
@@ -39,13 +39,13 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
       metaDescription={frontmatter.summary}
       publishedOn={frontmatter.publishedOn}
       author={frontmatter.author}
-      canonicalUrl={url}>
+      canonicalUrl={url}
+    >
       <article className="-mt-[40px]">
         <>
           <div className="relative h-screen">
             <figure>
               <Image
-                // className="absolute top-0 min-h-[800px]"
                 className="h-screen object-cover"
                 width={1920}
                 height={800}
@@ -57,6 +57,24 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
             <div className="absolute bottom-0 lg:bottom-10 w-full text-center text-white">
               {/* <div className="absolute top-1/2 w-full text-center text-white"> */}
               <div className="bg-black backdrop-blur-md bg-opacity-50 p-10">
+                {/* <div className="opacity-70 hover:opacity-100">
+                  <Breadcrumbs
+                    white
+                    className=""
+                    crumbs={[
+                      { name: "Articles", href: "/articles", current: false },
+                      {
+                        name: frontmatter.title,
+                        href:
+                          typeof window === "undefined"
+                            ? "#"
+                            : window.location.href,
+                        current: true,
+                      },
+                    ]}
+                  />
+                </div> */}
+
                 <h1 className="sm:text-4xl md:text-6xl font-hero drop-shadow-lg text-white border-none">
                   {frontmatter.title}
                 </h1>
@@ -64,7 +82,7 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
             </div>
           </div>
           <Container>
-            <div className="flex items-center justify-center my-3">
+            <div className="flex items-center my-3">
               <Breadcrumbs
                 crumbs={[
                   { name: "Articles", href: "/articles", current: false },
@@ -79,53 +97,64 @@ export default function Article({ slug, frontmatter, html, articles = [] }) {
                 ]}
               />
             </div>
-            <div className="flex flex-col-reverse sm:flex-row items-start justify-center my-4">
-              <div className="sm:w-2/3 text-prose max-w-2xl">
-                <div className="my-8 py-4">
-                  {frontmatter.translations.es ? (
-                    <span>
-                      Continue reading in English, or{" "}
-                      <Link href={frontmatter.translations.es}>
-                        Cambiando a Español
-                      </Link>
-                    </span>
-                  ) : (
-                    <span>
-                      Continúa leyendo en Español, o{" "}
-                      <Link href={frontmatter.translations.en}>
-                        switch to English
-                      </Link>
-                    </span>
+
+            <div className="grid md:grid-cols-3">
+              {/* 
+                  INTRO 
+                  ///////////////////
+              */}
+              <div className=" md:col-span-3 order-1">
+                <div className="my-7">
+                  <ContinueReading
+                    translations={frontmatter.translations}
+                  ></ContinueReading>
+                </div>
+                <p className="border-t border-b py-7 mb-0 text-xl md:text-2xl md:-mx-14">
+                  {frontmatter.summary}
+                </p>
+              </div>
+
+              <ArticleInfo
+                frontmatter={frontmatter}
+                className="md:hidden order-2 mt-3 border-b pb-2"
+              />
+              {/* 
+                    Main content 
+                    ///////////////////
+              */}
+              <div className="md:col-span-2 order-2 md:pr-5">
+                <div className="prose">
+                  <div
+                    dangerouslySetInnerHTML={{ __html: html }}
+                    className="article mt-5"
+                  />
+                </div>
+              </div>
+              {/* 
+                    Sidebar
+                    ///////////////////
+              */}
+              <div className="order-3">
+                <div className="border-t md:border-t-0 mt-10 md:mt-0 md:border-l pt-7 md:pl-5">
+                  <ArticleInfo
+                    frontmatter={frontmatter}
+                    className="hidden md:block"
+                  />
+                  {Boolean(filteredArticles.length) && (
+                    <div className="text-sm">
+                      <h3 className="my-4 mx-0">Recent articles</h3>
+                      <div className="flex flex-col gap-1 md:gap-3">
+                        {filteredArticles.map((article) => (
+                          <div>
+                            <Link href={`/articles/${article.slug}`}>
+                              {article.title}
+                            </Link>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   )}
                 </div>
-                <div dangerouslySetInnerHTML={{ __html: html }} />
-              </div>
-              <div className="w-full sm:w-1/3">
-                <div className="rounded-lg sm:border  p-3 sm:p-8  text-sm">
-                  <div className="font-semibold sm:text-xl">
-                    {frontmatter.author}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <CalendarIcon className=" h-4" />
-                    {frontmatter.publishedOn}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <ClockIcon className=" h-4" />
-                    {frontmatter.readTime}
-                  </div>
-                </div>
-                {Boolean(filteredArticles.length) && (
-                  <div className="p-3 sm:p-8  text-sm">
-                    <h3 className="my-4 mx-0">Recent articles</h3>
-                    {filteredArticles.map((article) => (
-                      <div>
-                        <Link href={`/articles/${article.slug}`}>
-                          {article.title}
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                )}
               </div>
             </div>
           </Container>

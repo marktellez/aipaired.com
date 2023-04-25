@@ -11,6 +11,16 @@ module.exports = {
         hero: ["Bebas Neue", "sans-serif"],
         sans: ["Airbnb Cereal", "sans-serif"],
       },
+      fontSize: {
+        "2xl": [
+          "1.5rem",
+          {
+            lineHeight: "2.3rem",
+            letterSpacing: "-0.01em",
+            fontWeight: "500",
+          },
+        ],
+      },
       colors: {
         red: {
           50: "#FFF5F5",
@@ -59,6 +69,20 @@ module.exports = {
           700: "#c71f5f",
           800: "#ae1a55",
           900: "#940f48",
+        },
+        black: {
+          DEFAULT: "#050506",
+          50: "#CDD0D5",
+          100: "#C2C5CC",
+          200: "#ACB0BA",
+          300: "#969BA7",
+          400: "#7F8694",
+          500: "#6B7280",
+          600: "#515761",
+          700: "#383C43",
+          800: "#1E2024",
+          900: "#050506",
+          950: "#000000",
         },
       },
     },

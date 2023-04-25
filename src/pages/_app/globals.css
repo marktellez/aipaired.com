@@ -49,20 +49,44 @@ blockquote {
   @apply prose sm:prose-sm lg:prose-lg xl:prose-xl prose-stone;
 }
 
-p {
-  @apply my-8;
-}
-
 h1 {
-  @apply text-4xl font-hero border-b-4 mt-8 leading-relaxed;
+  @apply text-4xl font-hero border-b-4 mt-8 leading-relaxed sm:pb-3 xl:pb-4;
 }
 
 h2 {
-  @apply text-3xl border-b-4 font-hero mt-16 border-gray-900;
+  @apply text-3xl border-b-4 mt-16 border-gray-900 pb-1;
+  /* @apply font-hero; */
 }
 
 h3 {
   @apply text-lg border-b mt-8 border-gray-500;
+}
+
+.prose {
+  /* h1 */
+  /* h2 */
+  @apply prose-h2:text-2xl sm:prose-h2:text-2xl lg:prose-h2:text-3xl prose-h2:leading-normal prose-h2:border-none;
+  @apply prose-h2:mb-7 prose-h2:mt-14;
+  @apply prose-h2:normal-case;
+  @apply prose-h2:text-black;
+  /* @apply prose-h2:border-l prose-h2:border-pink; */
+
+  /* h3 */
+  @apply prose-h3:text-lg sm:prose-h3:text-xl lg:prose-h3:text-2xl prose-h3:border-none prose-h3:leading-tight;
+  @apply prose-h3:border-none prose-h3:leading-normal;
+  @apply prose-h3:mb-4 prose-h3:mt-10;
+  @apply prose-h3:text-black-800;
+
+  /* h4 */
+  @apply prose-h4:text-base sm:prose-h4:text-lg lg:prose-h4:text-xl;
+  @apply prose-h4:text-black-700 lg:prose-h4:text-black-800;
+
+  /* p */
+  @apply prose-p:leading-normal;
+}
+
+p {
+  @apply my-8;
 }
 
 a {
@@ -92,3 +116,13 @@ a {
 .article li::before {
   content: "🌟 ";
 }
+
+.article img {
+  @apply sm:min-w-[106%] sm:ml-[-3%] mt-5;
+  /* min-width: 100vh; */
+}
+
+/* .capitalize-first::first-letter {
+  text-transform: uppercase;
+  @apply text-4xl;
+} */
